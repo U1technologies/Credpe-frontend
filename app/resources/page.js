@@ -238,7 +238,7 @@ export default function Resources() {
                       </div>
                     </CardHeader>
                     <CardContent>
-<p className="text-muted-foreground mb-4">{`"${story.story}"`}</p>
+               <p className="text-muted-foreground mb-5">{`"${story.story}"`}</p>
                       <div className="flex items-center">
                         {[...Array(story.rating)].map((_, j) => (
                           <Star key={j} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
