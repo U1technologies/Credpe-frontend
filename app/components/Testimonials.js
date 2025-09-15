@@ -52,13 +52,13 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section className="bg-background">
+      <div className="container mx-auto">
         {/* Section Heading */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+        <div className="text-center mb-7">
+          <h3 className="font-bold text-gray-800 mb-2">
             What Our Customers Say
-          </h2>
+          </h3>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
   Don&apos;t just take our word for it. Here&apos;s what thousands of satisfied
   customers have to say about their loan experience with CredPe.in.

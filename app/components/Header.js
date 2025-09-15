@@ -91,9 +91,13 @@ const Header = () => {
             <Button variant="outline" size="sm">
               Check Eligibility
             </Button>
-            <Button variant="cta" size="sm">
-              Apply Now
-            </Button>
+           <Link
+                  href={"/apply/personal"}
+                >
+                <Button variant="cta" size="sm">
+                  Apply Now
+                </Button>
+                </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -163,15 +167,18 @@ const Header = () => {
               >
                 Contact
               </Link>
+<div className="flex flex-col space-y-2 pt-4">
+  <Button variant="cta" size="sm">
+    Check Eligibility
+  </Button>
 
-              <div className="flex flex-col space-y-2 pt-4">
-                <Button variant="outline" size="sm">
-                  Check Eligibility
-                </Button>
-                <Button variant="cta" size="sm">
-                  Apply Now
-                </Button>
-              </div>
+  <Link href="/apply/personal" className="w-full">
+    <Button variant="cta" size="sm" className="w-full">
+      Apply Now
+    </Button>
+  </Link>
+</div>
+
             </nav>
           </div>
         )}

@@ -10,13 +10,13 @@
   --popover-foreground: #1a1a1a;
   
   /* Primary: Professional Blue */
-  --primary: #48b33d;
+  --primary: #1b3a6a;
   --primary-foreground: #ffffff;
   --primary-hover: #1E3A8A;
   --primary-light: #DBEAFE;
   
   /* Accent: Energetic Orange (for buttons and highlights) */
-  --accent: #F97316;
+  --accent: #1b3a6a;
   --accent-foreground: #ffffff;
   --accent-hover: #EA580C;
   --accent-light: #FED7AA;
@@ -182,9 +182,9 @@ section {
 
 .section-heading {
   width: 100%;
-  padding-bottom: 12px;
+  /* padding-bottom: 6px; */
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .section-heading-twoLiner {
