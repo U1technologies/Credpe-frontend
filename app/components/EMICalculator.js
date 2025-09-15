@@ -6,6 +6,7 @@ import { Button } from "./ui/button";
 import { Label } from "./ui/label";
 import { Slider } from "./ui/slider";
 import { Calculator } from "lucide-react";
+import Link from "next/link";
 
 const EMICalculator = () => {
   const [loanAmount, setLoanAmount] = useState([500000]);
@@ -39,13 +40,13 @@ const EMICalculator = () => {
   };
 
   return (
-    <div className="py-4 bg-muted/30">
-      <section className=" mx-auto ">
+    <section className="">
+      <div className=" mx-auto ">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+        <div className="text-center mb-7">
+          <h3 className="font-bold text-gray-800 mb-2">
             EMI Calculator
-          </h2>
+          </h3>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Calculate your Equated Monthly Installment (EMI) and plan your loan
             repayment. Get instant results with our advanced calculator.
@@ -166,9 +167,11 @@ const EMICalculator = () => {
                   </div>
 
                   <div className="flex gap-3">
-                    <Button variant="cta" className="flex-1">
-                      Apply for This Loan
-                    </Button>
+                      <Link href="/apply/personal">
+    <Button variant="cta" className="flex-1">
+      Apply Now
+    </Button>
+  </Link>
                     <Button variant="outline" className="flex-1">
                       Get Best Rates
                     </Button>
@@ -178,8 +181,8 @@ const EMICalculator = () => {
             </CardContent>
           </Card>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 

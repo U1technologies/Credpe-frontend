@@ -30,17 +30,14 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-foreground text-background">
+    <footer className="bg-primary text-background">
       <div className="container mx-auto px-4">
         {/* Main Footer Content */}
         <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center space-x-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-cta">
-                <span className="text-lg font-bold text-accent-foreground">C</span>
-              </div>
-              <span className="text-2xl font-bold">CredPe.in</span>
+              <span className="text-2xl font-bold">CREDPE</span>
             </div>
             <div className="text-white ">
               Your trusted partner for all loan needs. We provide quick, secure, and affordable
@@ -50,16 +47,16 @@ const Footer = () => {
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-accent" />
-                <span className="text-background/90">+91 9876543210</span>
+                <Phone className="w-5 h-5 text-white" />
+                <span className="text-background/90">+91 8292943921</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-accent" />
+                <Mail className="w-5 h-5 text-white" />
                 <span className="text-background/90">support@credpe.in</span>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-accent" />
-                <span className="text-background/90">Mumbai, Maharashtra, India</span>
+                <MapPin className="w-5 h-5 text-white" />
+                <span className="text-background/90">Noida, Uttar Pradesh, India</span>
               </div>
             </div>
           </div>

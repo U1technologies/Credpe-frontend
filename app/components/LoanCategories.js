@@ -94,13 +94,13 @@ const LoanCategories = () => {
   ];
 
   return (
-    <div className="bg-[#F0F7FF]">
-      <div className="w-[90%] mx-auto py-10">
-        <div className="text-center mb-10">
+    <div className="">
+      <div className="w-[90%] mx-auto">
+        <div className="text-center mb-4">
           <h3 className="font-bold text-gray-800">Popular Products</h3>
 
           {/* Tab Navigation */}
-          <div className="flex justify-center mt-6 space-x-8">
+          <div className="flex justify-center mt-3 space-x-8">
             <button
               onClick={() => setActiveTab("loans")}
               className={`pb-2 font-medium text-sm transition-all relative ${
@@ -126,11 +126,11 @@ const LoanCategories = () => {
 
         {/* Loans Section */}
         {activeTab === "loans" ? (
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 px-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
             {loanTypes.map((loan) => (
               <div
                 key={loan.name}
-                className="relative flex flex-col items-center text-center rounded-xl shadow hover:shadow-md transition-all overflow-hidden bg-white"
+                className="relative flex flex-col items-center text-center border border-[#000] rounded-xl shadow hover:shadow-md transition-all overflow-hidden bg-white"
               >
                 {/* Badge - top right */}
                 {loan.badge && (
