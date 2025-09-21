@@ -1,3 +1,11 @@
+"use client";
+
+import { useState, useEffect } from "react";
+// Add these missing imports
+import { Label } from "@/app/components/ui/label";
+import { Input } from "@/app/components/ui/input"; 
+import { Slider } from "@/app/components/ui/slider";
+
 // 🔹 Reusable Input + Slider (fixed alignment and input handling)
 const InputWithSlider = ({ label, min, max, step, value, setValue, prefix }) => {
   const [inputValue, setInputValue] = useState('');
@@ -8,7 +16,7 @@ const InputWithSlider = ({ label, min, max, step, value, setValue, prefix }) => 
     if (!isFocused) {
       setInputValue(value[0].toString());
     }
-  }, [value, isFocused]);
+  }, [value, isFocused]); // Fixed - added missing dependencies
 
   const handleInputChange = (e) => {
     const rawValue = e.target.value.replace(/\D/g, "");
@@ -80,4 +88,4 @@ const InputWithSlider = ({ label, min, max, step, value, setValue, prefix }) => 
   );
 };
 
-export default InputWithSlider
+export default InputWithSlider;

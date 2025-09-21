@@ -105,23 +105,23 @@ const Hero = () => {
   };
 
   // Add mouse event listeners
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
+useEffect(() => {
+  const container = containerRef.current;
+  if (!container) return;
 
-    const handleGlobalMouseMove = (e) => handleMouseMove(e);
-    const handleGlobalMouseUp = () => handleMouseUp();
+  const handleGlobalMouseMove = (e) => handleMouseMove(e);
+  const handleGlobalMouseUp = () => handleMouseUp();
 
-    if (isDragging) {
-      document.addEventListener('mousemove', handleGlobalMouseMove);
-      document.addEventListener('mouseup', handleGlobalMouseUp);
-    }
+  if (isDragging) {
+    document.addEventListener('mousemove', handleGlobalMouseMove);
+    document.addEventListener('mouseup', handleGlobalMouseUp);
+  }
 
-    return () => {
-      document.removeEventListener('mousemove', handleGlobalMouseMove);
-      document.removeEventListener('mouseup', handleGlobalMouseUp);
-    };
-  }, [isDragging]);
+  return () => {
+    document.removeEventListener('mousemove', handleGlobalMouseMove);
+    document.removeEventListener('mouseup', handleGlobalMouseUp);
+  };
+}, [isDragging, handleMouseMove, handleMouseUp]); // Add missing dependencies
 
   return (
     <div className="relative min-h-[50vh] max-md:min-h-[45vh] max-md:my-2 flex flex-col items-center justify-center overflow-hidden">
