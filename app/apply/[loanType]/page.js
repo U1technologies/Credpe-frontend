@@ -1,4 +1,5 @@
 
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -10,7 +11,7 @@ import { Card, CardContent } from "../../components/ui/card";
 import { useToast } from "../../hooks/useToast";
 import { ArrowLeft, Shield, CheckCircle, RefreshCw } from "lucide-react";
 import Header from "@/app/components/Header";
-import Footer from "@/app/components/Footer";
+// import Footer from "@/app/components/Footer";
 import Image from "next/image";
 
 export default function MobileVerificationFlow() {
@@ -39,6 +40,7 @@ export default function MobileVerificationFlow() {
   const [isLoading, setIsLoading] = useState(false);
   const [resendCount, setResendCount] = useState(0);
   const [timer, setTimer] = useState(0);
+  const [isTermsAccepted, setIsTermsAccepted] = useState(false);
 
   useEffect(() => {
     if (timer > 0) {
@@ -178,25 +180,25 @@ const handleVerifyOtp = async () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main className="container mx-auto px-4 py-8">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center min-h-[600px]">
-          <div className="relative bg-primary rounded-2xl p-6 text-center text-white order-2 lg:order-1">
-            <div className="space-y-6">
-              <div className="relative mx-auto w-48 h-48 lg:w-64 lg:h-64 rounded-xl overflow-hidden shadow-2xl">
-                <Image src={currentLoanImage} alt={currentLoanTitle} height={100} width={100} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-black/20" />
-              </div>
-              <div className="space-y-4">
-                <h3 className="font-bold">Secure Loans in Minutes</h3>
-                <p className="text-lg opacity-90">Get approved for your {currentLoanTitle} with our quick and secure process</p>
-                <div className="flex items-center justify-center gap-4 text-sm">
-                  <div className="flex items-center gap-2"><Shield className="h-5 w-5" /><span>100% Secure</span></div>
-                  <div className="flex items-center gap-2"><CheckCircle className="h-5 w-5" /><span>Instant Approval</span></div>
+        <div className="">
+          {/* Mobile Layout: Blue section first, then form */}
+          <div className="md:hidden space-y-6">
+            {/* Blue section for mobile */}
+            <div className="relative  text-center text-white">
+              <div className="space-y-6">
+                <div className="space-y-4">
+                  <h3 className="font-bold text-foreground">Secure Loans in Minutes</h3>
+                  <p className="text-lg text-gray-600">Get approved for your {currentLoanTitle} with our quick and secure process</p>
+                  <div className="flex items-center justify-center gap-4 text-sm">
+                    <div className="flex items-center gap-2 text-primary"><Shield className="h-5 w-5" /><span className="text-primary font-medium">100% Secure</span></div>
+                    <div className="flex items-center gap-2 text-primary"><CheckCircle className="h-5 w-5" /><span className="text-primary font-medium">Instant Approval</span></div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="order-1 lg:order-2">
-            <Card className="bg-white border-0 shadow-xl">
+
+            {/* Form section for mobile */}
+            <Card className="bg-white border border-primary shadow-md">
               <CardContent className="p-8">
                 <div className="space-y-6">
                   <div className="text-center">
@@ -217,17 +219,35 @@ const handleVerifyOtp = async () => {
                             <Input
                               id="phoneNumber"
                               type="tel"
-                              placeholder="e.g. 9999999999"
+                              placeholder="8292458790"
                               value={phoneNumber}
                               onChange={(e) => setPhoneNumber(e.target.value.replace(/\D/g, "").slice(0, 10))}
                               className="flex-1"
                             />
                           </div>
-                          <p className="text-sm text-gray-500">No spam calls, we promise!</p>
+                        </div>
+                        <div className="flex items-start space-x-2">
+                          <input
+                            type="checkbox"
+                            id="terms"
+                            checked={isTermsAccepted}
+                            onChange={(e) => setIsTermsAccepted(e.target.checked)}
+                            className="mt-1 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                          />
+                          <label htmlFor="terms" className="text-xs text-muted-foreground">
+                            I confirm this is my registered number and authorize Credpe & partners to contact me via call, SMS, WhatsApp, or email (even if on DND), as per the{" "}
+                            <a href="/terms" className="text-blue-600 hover:underline" target="_blank">
+                              Terms & Conditions
+                            </a>{" "}
+                            and{" "}
+                            <a href="/privacy" className="text-blue-600 hover:underline" target="_blank">
+                              Privacy Policy.
+                            </a>
+                          </label>
                         </div>
                         <Button
                           onClick={handleSendOtp}
-                          disabled={!phoneNumber || phoneNumber.length !== 10 || isLoading}
+                          disabled={!phoneNumber || phoneNumber.length !== 10 || !isTermsAccepted || isLoading}
                           className="w-full bg-blue-600 hover:bg-blue-700"
                         >
                           {isLoading ? <div className="flex items-center gap-2"><RefreshCw className="h-4 w-4 animate-spin" />Sending OTP...</div> : "Send OTP"}
@@ -272,18 +292,135 @@ const handleVerifyOtp = async () => {
                       </>
                     )}
                   </div>
-                  <div className="pt-4 border-t border-border">
-                    <p className="text-xs text-muted-foreground text-center">
-                      I confirm that this is my registered mobile number and authorize the use of it for communications related to my loan application, as per the Terms & Conditions and Privacy Policy.
-                    </p>
-                  </div>
                 </div>
               </CardContent>
             </Card>
           </div>
+
+          {/* Desktop Layout: Original grid layout */}
+          <section className="flex items-center justify-center py-12">
+<div className="hidden md:grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+            <div className="relative bg-primary rounded-2xl h-[410px] p-6 text-center text-white order-2 lg:order-1">
+              <div className="space-y-6">
+                <div className="relative mx-auto w-48 h-48 rounded-xl overflow-hidden shadow-2xl">
+                  <Image src={currentLoanImage} alt={currentLoanTitle} height={100} width={100} className="w-full h-full object-cover" />
+                  <div className="absolute inset-0 bg-black/20" />
+                </div>
+                <div className="space-y-4">
+                  <h3 className="font-bold">Secure Loans in Minutes</h3>
+                  <p className="text-lg opacity-90">Get approved for your {currentLoanTitle} with our quick and secure process</p>
+                  <div className="flex items-center justify-center gap-4 text-sm">
+                    <div className="flex items-center gap-2"><Shield className="h-5 w-5" /><span>100% Secure</span></div>
+                    <div className="flex items-center gap-2"><CheckCircle className="h-5 w-5" /><span>Instant Approval</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="order-1 lg:order-2">
+              <Card className="bg-white border border-primary rounded-2xl shadow-md h-[400px]">
+                <CardContent className="p-8">
+                  <div className="space-y-6">
+                    <div className="text-center">
+                      <h3 className="text-2xl font-bold text-foreground mb-2">
+                        {step === "mobile" ? "Enter Mobile Number" : "Enter OTP"}
+                      </h3>
+                      <p className="text-muted-foreground">
+                        {step === "mobile" ? "We'll send you a verification code" : `OTP sent to +91 ${phoneNumber}`}
+                      </p>
+                    </div>
+                    <div className="space-y-6">
+                      {step === "mobile" && (
+                        <>
+                          <div className="space-y-2">
+                            <Label htmlFor="phoneNumber" className="text-sm font-medium">Mobile Number</Label>
+                            <div className="flex gap-3">
+                              <div className="flex items-center bg-muted px-3 rounded-md border"><span className="text-sm font-medium">+91</span></div>
+                              <Input
+                                id="phoneNumber"
+                                type="tel"
+                                placeholder="8292458790"
+                                value={phoneNumber}
+                                onChange={(e) => setPhoneNumber(e.target.value.replace(/\D/g, "").slice(0, 10))}
+                                className="flex-1"
+                              />
+                            </div>
+                          </div>
+                          <div className="flex items-start space-x-2">
+                            <input
+                              type="checkbox"
+                              id="terms"
+                              checked={isTermsAccepted}
+                              onChange={(e) => setIsTermsAccepted(e.target.checked)}
+                              className="mt-1 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                            />
+                            <label htmlFor="terms" className="text-xs text-muted-foreground">
+                            I confirm this is my registered number and authorize Credpe & partners to contact me via call, SMS, WhatsApp, or email (even if on DND), as per the{" "}
+                            <a href="/terms" className="text-blue-600 hover:underline" target="_blank">
+                              Terms & Conditions
+                            </a>{" "}
+                            and{" "}
+                            <a href="/privacy" className="text-blue-600 hover:underline" target="_blank">
+                              Privacy Policy.
+                            </a>
+                          </label>
+                          </div>
+                          <Button
+                            onClick={handleSendOtp}
+                            disabled={!phoneNumber || phoneNumber.length !== 10 || !isTermsAccepted || isLoading}
+                            className="w-full bg-blue-600 hover:bg-blue-700"
+                          >
+                            {isLoading ? <div className="flex items-center gap-2"><RefreshCw className="h-4 w-4 animate-spin" />Sending OTP...</div> : "Send OTP"}
+                          </Button>
+                        </>
+                      )}
+                      {step === "otp" && (
+                        <>
+                          <div className="space-y-2">
+                            <Label htmlFor="otp" className="text-sm font-medium">Enter 6-Digit OTP</Label>
+                            <Input
+                              id="otp"
+                              type="text"
+                              placeholder="Enter OTP"
+                              value={otp}
+                              onChange={(e) => setOtp(e.target.value.replace(/\D/g, "").slice(0, 6))}
+                              className="text-center text-lg font-mono tracking-widest"
+                            />
+                          </div>
+                          <Button
+                            onClick={handleVerifyOtp}
+                            disabled={otp.length !== 6 || isLoading}
+                            className="w-full bg-green-600 hover:bg-green-700"
+                          >
+                            {isLoading ? <div className="flex items-center gap-2"><RefreshCw className="h-4 w-4 animate-spin" />Verifying...</div> : "Verify OTP"}
+                          </Button>
+                          <div className="text-center space-y-2">
+                            {timer > 0 ? (
+                              <p className="text-sm text-muted-foreground">Resend OTP in {timer} seconds</p>
+                            ) : (
+                              <Button
+                                variant="ghost"
+                                size="sm"
+                                onClick={handleResendOtp}
+                                disabled={resendCount >= 2 || isLoading}
+                              >
+                                Resend OTP {resendCount > 0 && `(${resendCount}/2)`}
+                              </Button>
+                            )}
+                            {resendCount >= 2 && <p className="text-xs text-destructive">Maximum resend attempts reached</p>}
+                          </div>
+                        </>
+                      )}
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+          </section>
         </div>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

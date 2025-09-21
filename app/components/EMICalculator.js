@@ -40,37 +40,27 @@ const EMICalculator = () => {
   };
 
   return (
-    <section className="">
+    <div className="w-[85%] pt-10 mx-auto">
       <div className=" mx-auto ">
         {/* Header */}
         <div className="text-center mb-7">
           <h3 className="font-bold text-gray-800 mb-2">
             EMI Calculator
           </h3>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Calculate your Equated Monthly Installment (EMI) and plan your loan
-            repayment. Get instant results with our advanced calculator.
+          <p className="text-muted-foreground max-w-3xl mx-auto">
+            Get instant EMI results with our advanced loan calculator.
           </p>
         </div>
 
         {/* Card */}
         <div className="max-w-4xl mx-auto">
-          <Card className="gradient-card border-0 shadow-medium">
-            <CardHeader className="text-center pb-8">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary flex items-center justify-center">
-                <Calculator className="w-8 h-8 text-primary-foreground" />
-              </div>
-              <CardTitle className="text-2xl font-bold">
-                Loan EMI Calculator
-              </CardTitle>
-            </CardHeader>
-
+          <Card className="gradient-card border border-[#000] shadow-medium">
             <CardContent>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 max-md:gap-6 mt-6">
                 {/* Input Controls */}
-                <div className="space-y-8">
+                <div className="space-y-6">
                   {/* Loan Amount */}
-                  <div className="space-y-4">
+                  <div className="space-y-2">
                     <Label className="text-base font-semibold">
                       Loan Amount: {formatCurrency(loanAmount[0])}
                     </Label>
@@ -80,7 +70,7 @@ const EMICalculator = () => {
                       max={10000000}
                       min={50000}
                       step={50000}
-                      className="w-full"
+                      className="w-full mt-1"
                     />
                     <div className="flex justify-between text-sm text-muted-foreground">
                       <span>₹50K</span>
@@ -128,61 +118,59 @@ const EMICalculator = () => {
                 </div>
 
                 {/* Results */}
-                <div className="space-y-6">
-                  <div className="bg-primary rounded-lg p-6 text-center">
-                    <div className="text-lg font-semibold text-white mb-2">
+                <div className="space-y-3">
+                  <div className="bg-primary rounded-lg p-3 text-center">
+                    <span className="text-sm text-white">
                       Monthly EMI
-                    </div>
-                    <div className="text-4xl font-bold text-primary-foreground">
+                    </span>
+                    <h3 className=" font-bold text-primary-foreground">
                       {formatCurrency(emi)}
-                    </div>
+                    </h3>
                   </div>
 
                   <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-card border rounded-lg p-4 text-center">
+                    <div className="bg-card border rounded-lg p-2 text-center">
                       <div className="text-sm text-muted-foreground mb-1">
                         Principal Amount
                       </div>
-                      <div className="text-xl font-bold text-foreground">
+                      <h4 className="font-bold text-foreground">
                         {formatCurrency(loanAmount[0])}
-                      </div>
+                      </h4>
                     </div>
-                    <div className="bg-card border rounded-lg p-4 text-center">
+                    <div className="bg-card border rounded-lg p-2 text-center">
                       <div className="text-sm text-muted-foreground mb-1">
                         Total Interest
                       </div>
-                      <div className="text-xl font-bold text-foreground">
+                      <h4 className="font-bold text-foreground">
                         {formatCurrency(totalInterest)}
-                      </div>
+                      </h4>
                     </div>
                   </div>
 
-                  <div className="bg-card border rounded-lg p-4 text-center">
+                  <div className="bg-card border rounded-lg p-2 text-center">
                     <div className="text-sm text-muted-foreground mb-1">
                       Total Amount Payable
                     </div>
-                    <div className="text-2xl font-bold text-foreground">
+                    <h3 className="font-bold text-foreground">
                       {formatCurrency(totalAmount)}
-                    </div>
+                    </h3>
                   </div>
 
-                  <div className="flex gap-3">
-                      <Link href="/apply/personal">
-    <Button variant="cta" className="flex-1">
+                 <div className="w-full">
+  <Link href="/apply/personal">
+    <Button variant="cta" className="w-full">
       Apply Now
     </Button>
   </Link>
-                    <Button variant="outline" className="flex-1">
-                      Get Best Rates
-                    </Button>
-                  </div>
+</div>
+
                 </div>
               </div>
             </CardContent>
           </Card>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

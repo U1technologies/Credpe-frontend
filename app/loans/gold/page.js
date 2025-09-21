@@ -87,7 +87,7 @@ const KeyHighlights = ({ highlights }) => (
     <div className="container mx-auto px-4">
       <div className="mx-auto max-w-4xl">
         <h3 className="font-bold text-center mb-6 text-gray-800">
-          Key Highlights of Personal Loan
+          Key Highlights of  Loan
         </h3>
         <ul className="list-disc list-inside space-y-2 text-gray-700 ">
           {highlights.map((highlight, index) => (
@@ -103,7 +103,7 @@ const BestBanks = ({ banks }) => (
   <section id="banks" className="py-10">
     <div className="container mx-auto px-4">
       <div className="max-w-6xl mx-auto">
-        <h3 className="font-bold text-center mb-6 text-gray-800">Best Banks & NBFCs Offering Personal Loan</h3>
+        <h3 className="font-bold text-center mb-6 text-gray-800">Best Banks & NBFCs Offering Gold Loan</h3>
         <div className="overflow-x-auto">
           <table className="w-full bg-white rounded-lg overflow-hidden">
             <thead className="bg-primary text-white">
@@ -134,21 +134,40 @@ const BestBanks = ({ banks }) => (
 );
 
 const Features = ({ features }) => {
+  // Icon mapping for each feature
+  const getFeatureIcon = (title) => {
+    switch(title.toLowerCase()) {
+      case 'interest rate':
+        return <Percent className="w-6 h-6 text-white" />;
+      case 'loan amount':
+        return <DollarSign className="w-6 h-6 text-white" />;
+      case 'loan tenure':
+        return <Calendar className="w-6 h-6 text-white" />;
+      case 'processing time':
+        return <Zap className="w-6 h-6 text-white" />;
+      case 'security':
+        return <Shield className="w-6 h-6 text-white" />;
+      case 'prepayment':
+        return <RefreshCw className="w-6 h-6 text-white" />;
+      default:
+        return <CreditCard className="w-6 h-6 text-white" />;
+    }
+  };
 
   return (
     <section id="features" className="pb-10">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-          <h3 className="font-bold text-center mb-8 text-gray-800">Features & Benefits of Personal Loan</h3>
+          <h3 className="font-bold text-center mb-8 text-gray-800">Features & Benefits of Gold Loan</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 px-6 max-md:px-0">
             {features.map((feature, index) => (
              <div key={index} className="flex justify-center">
   {/* Main content container */}
   <div className="relative w-full  h-[100px] bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 p-3 flex items-center pl-10">
     {/* Icon positioned half outside container */}
-  <div className="absolute -left-6 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-lg">
-                    <feature.icon className="w-6 h-6 text-white" />
-                  </div>
+    <div className="absolute -left-6 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-lg">
+      {getFeatureIcon(feature.title)}
+    </div>
 
     {/* Content */}
     <div className="flex-1">
@@ -183,7 +202,7 @@ const LoanTypes = ({ types }) => {
     <section id="types" className="pb-10">
       <div className="container mx-auto px-4">
         <h3 className="font-bold text-center mb-8 text-gray-800">
-          Types of Personal Loan
+          Types of Gold Loan
         </h3>
 
         {/* Scrollable cards */}
@@ -287,8 +306,8 @@ const Eligibility = ({ eligibility, documents }) => {
                         <td className="py-2 text-gray-600 pl-4 border-b">{eligibility.creditScore}</td>
                       </tr>
                       <tr className="border-b border-gray-200">
-                        <td className="py-2 font-medium text-gray-700  border-r border-gray-300">Documents</td>
-                        <td className="py-2 text-gray-600 pl-4 ">{eligibility.documents}</td>
+                        <td className="py-2 font-medium text-gray-700 border-r border-gray-300">Documents</td>
+                        <td className="py-2 text-gray-600 pl-4">{eligibility.documents}</td>
                       </tr>
                     </tbody>
                   </table>
@@ -311,10 +330,20 @@ const Eligibility = ({ eligibility, documents }) => {
                         </td>
                       </tr>
                       <tr className="border-b border-gray-200">
-                        <td className="py-2 font-medium text-gray-700 border-b border-r border-gray-300">Income Proof (Salaried)</td>
+                        <td className="py-2 font-medium text-gray-700 border-b border-r border-gray-300">Address Proof</td>
                         <td className="py-2 text-gray-600 pl-4 border-b">
                           <ul className="list-disc list-inside">
-                            {documents.income.salaried.map((doc, index) => (
+                            {documents.address.map((doc, index) => (
+                              <li key={index}>{doc}</li>
+                            ))}
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr className="border-b border-gray-200">
+                        <td className="py-2 font-medium text-gray-700 border-b border-r border-gray-300">Gold Documents</td>
+                        <td className="py-2 text-gray-600 pl-4 border-b">
+                          <ul className="list-disc list-inside">
+                            {documents.gold.map((doc, index) => (
                               <li key={index}>{doc}</li>
                             ))}
                           </ul>
@@ -322,7 +351,7 @@ const Eligibility = ({ eligibility, documents }) => {
                       </tr>
                       <tr className="border-b border-gray-200">
                         <td className="py-2 font-medium text-gray-700 border-r border-gray-300">Others</td>
-                        <td className="py-2 text-gray-600 pl-4 ">
+                        <td className="py-2 text-gray-600 pl-4">
                           <ul className="list-disc list-inside">
                             {documents.others.map((doc, index) => (
                               <li key={index}>{doc}</li>
@@ -347,7 +376,7 @@ const ApplicationProcess = ({ steps }) => (
   <section id="application" className="pb-10">
     <div className="container mx-auto px-4">
       <div className="max-w-6xl mx-auto">
-        <h3 className="font-bold text-center mb-8 max-md:mb-4 text-gray-800">How to Apply for Personal Loan</h3>
+        <h3 className="font-bold text-center mb-8 max-md:mb-4 text-gray-800">How to Apply for Gold Loan</h3>
        
         {/* Desktop: Horizontal Timeline, Mobile: Vertical Timeline */}
         <div className="relative bg-gray-100 py-10 px-8 max-md:py-4 max-md:px-4 rounded-xl">
@@ -396,7 +425,7 @@ const ApplicationProcess = ({ steps }) => (
   </section>
 );
 
-export default function PersonalLoan() {
+export default function goldLoan() {
   // const { toast } = useToast();
   const [activeSection, setActiveSection] = useState("highlights");
   const [formData, setFormData] = useState({
@@ -410,14 +439,14 @@ export default function PersonalLoan() {
   const [showHeader, setShowHeader] = useState(true);
 
   // Get content for personal loan
-  const content = loanContent.personal;
+  const content = loanContent.gold;
 
   // Define sections for navigation
   const sections = [
     { id: "highlights", title: "Key Highlights" },
     { id: "banks", title: "Best Banks & NBFCs" },
     { id: "features", title: "Features & Benefits" },
-    { id: "types", title: "Types of Personal Loan" },
+    { id: "types", title: "Types" },
     { id: "eligibility", title: "Eligibility Required" },
     { id: "application", title: "How to Apply" },
      { id: "calculator", title: "EMI Calculator" },
@@ -493,7 +522,7 @@ useEffect(() => {
       <div className="flex justify-center md:justify-end">
         <Image
           src={personalLoanImg}
-          alt="Personal Loan"
+          alt="Gold Loan"
           height={400}
           width={400}
           className="w-full max-w-md object-contain rounded-lg"

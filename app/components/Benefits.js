@@ -1,97 +1,57 @@
 "use client";
 
 import { Card, CardContent } from "./ui/card";
-import { CheckCircle, Clock, Shield, Calculator, Users, CreditCard } from "lucide-react";
+import { Search, Zap, Shield, Calculator, Users, CheckCircle } from "lucide-react";
 
 const Benefits = () => {
-const benefits = [
-  {
-    icon: Clock,
-    title: "Fast Approval",
-    description: "Loan approval in just 30 seconds."
-  },
-  {
-    icon: Calculator,
-    title: "Flexible EMIs",
-    description: "Pick EMIs that suit your budget."
-  },
-  {
-    icon: Shield,
-    title: "100% Secure",
-    description: "Bank-grade security, fully encrypted."
-  },
-  {
-    icon: CreditCard,
-    title: "Low Interest Rates",
-    description: "Rates starting from 8.5% p.a."
-  },
-  {
-    icon: Users,
-    title: "Expert Support",
-    description: "Get help from dedicated managers."
-  },
-  {
-    icon: CheckCircle,
-    title: "No Hidden Charges",
-    description: "Clear pricing, no hidden fees."
-  }
-];
-
+  const benefits = [
+    {
+      icon: Search,
+      title: "Wide Comparison",
+      description: "Compare top banks and NBFCs in one place."
+    },
+    {
+      icon: Calculator,
+      title: "Instant Results",
+      description: "Get EMI, interest rates, and offers instantly."
+    },
+    {
+      icon: Shield,
+      title: "100% Secure",
+      description: "Your data stays private and fully encrypted."
+    },
+    {
+      icon: Zap,
+      title: "Smart Insights",
+      description: "Transparent view of charges and repayment options."
+    },
+    {
+      icon: Users,
+      title: "Expert Guidance",
+      description: "Helpful tips to choose the right loan for you."
+    },
+    {
+      icon: CheckCircle,
+      title: "No Extra Cost",
+      description: "Free loan comparison, no hidden fees."
+    }
+  ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-10 bg-background">
       <div className="container mx-auto">
         {/* Header */}
-        <div className="section-heading">
+        <div className="section-heading text-center">
           <h3 className="font-bold text-gray-800 mb-2">
-            Why Choose CredPe.in?
+            Why Compare with CredPe.in?
           </h3>
-         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-  We&apos;re committed to providing you with the best loan experience. 
-  Here&apos;s what makes us different from traditional lenders.
-</p>
-
-        </div>
-
-        <div className="bg-primary mb-8 rounded-2xl p-8 md:p-12 animate-fade-in">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div className="group">
-              <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2 group-hover:scale-105 transition-transform">
-                10,000+
-              </div>
-              <div className="text-primary-foreground opacity-90 font-medium">
-                Crores Disbursed
-              </div>
-            </div>
-            <div className="group">
-              <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2 group-hover:scale-105 transition-transform">
-                5L+
-              </div>
-              <div className="text-primary-foreground opacity-90 font-medium">
-                Happy Customers
-              </div>
-            </div>
-            <div className="group">
-              <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2 group-hover:scale-105 transition-transform">
-                30 Sec
-              </div>
-              <div className="text-primary-foreground opacity-90 font-medium">
-                Quick Approval
-              </div>
-            </div>
-            <div className="group">
-              <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2 group-hover:scale-105 transition-transform">
-                8.5%
-              </div>
-              <div className="text-primary-foreground opacity-90 font-medium">
-                Interest Rate*
-              </div>
-            </div>
-          </div>
+          <p className="text-muted-foreground max-w-3xl mx-auto">
+           Save time and money with our instant loan comparison.
+          </p>
         </div>
 
         {/* Benefits Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
           {benefits.map((benefit, index) => {
             const IconComponent = benefit.icon;
             return (
@@ -108,7 +68,7 @@ const benefits = [
                   />
                 </div>
                 
-                <h4 className="font-semibold text-foreground ">
+                <h4 className="font-semibold text-foreground">
                   {benefit.title}
                 </h4>
                 

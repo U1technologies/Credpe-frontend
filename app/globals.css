@@ -146,7 +146,6 @@ section {
   width: var(--section-width);
   max-width: 1300px;
   margin: 0 auto;
-  padding: 60px 0px 60px;
 }
 
 .section-width {
@@ -159,24 +158,20 @@ section {
 @media screen and (max-width: 1024px) {
   section {
     width: var(--section-width-mobile);
-    padding: 40px 0px 40px;
   }
 
   .section-width {
     width: var(--section-width-mobile);
-    padding: 40px 0px 10px;
   }
 }
 
 @media screen and (min-width: 1536px) {
   section {
     max-width: 1500px;
-    padding: 40px 0px 40px;
   }
 
   .section-width {
     max-width: 1500px;
-    padding: 40px 0px 10px;
   }
 }
 
@@ -545,4 +540,21 @@ label {
   .loan-card {
     padding: 1.5rem;
   }
+  
 }
+/* ✅ Utility to hide scrollbar everywhere */
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+#section-nav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
