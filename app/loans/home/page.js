@@ -415,7 +415,7 @@ const ApplicationProcess = ({ steps }) => (
   </section>
 );
 
-export default function homeLoan() {
+export default function HomeLoan() {
   // const { toast } = useToast();
   const [activeSection, setActiveSection] = useState("highlights");
   const [formData, setFormData] = useState({

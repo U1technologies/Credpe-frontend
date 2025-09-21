@@ -425,7 +425,7 @@ const ApplicationProcess = ({ steps }) => (
   </section>
 );
 
-export default function educationLoan() {
+export default function EducationLoan() {
   // const { toast } = useToast();
   const [activeSection, setActiveSection] = useState("highlights");
   const [formData, setFormData] = useState({

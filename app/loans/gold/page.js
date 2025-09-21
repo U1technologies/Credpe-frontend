@@ -425,7 +425,7 @@ const ApplicationProcess = ({ steps }) => (
   </section>
 );
 
-export default function goldLoan() {
+export default function GoldLoan() {
   // const { toast } = useToast();
   const [activeSection, setActiveSection] = useState("highlights");
   const [formData, setFormData] = useState({
