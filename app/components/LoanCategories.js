@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -95,7 +94,7 @@ const LoanCategories = () => {
 
   return (
     <div className="">
-      <div className="w-[90%] mx-auto">
+      <section className="mx-auto">
         <div className="text-center mb-4">
           <h3 className="font-bold text-gray-800">Popular Products</h3>
 
@@ -120,6 +119,16 @@ const LoanCategories = () => {
               }`}
             >
               <h4>Insurance</h4>
+            </button>
+            <button
+              onClick={() => setActiveTab("credit-cards")}
+              className={`pb-2 font-medium text-sm transition-all relative ${
+                activeTab === "credit-cards"
+                  ? "text-[#0057d1] border-b-2 border-[#0057d1] font-semibold"
+                  : "text-gray-600 hover:text-gray-900"
+              }`}
+            >
+              <h4>Credit Cards</h4>
             </button>
           </div>
         </div>
@@ -168,7 +177,7 @@ const LoanCategories = () => {
               </div>
             ))}
           </div>
-        ) : (
+        ) : activeTab === "insurance" ? (
           <div className="text-center py-20">
             <div className="max-w-md mx-auto">
               <div className="text-6xl mb-4">🚀</div>
@@ -183,8 +192,23 @@ const LoanCategories = () => {
               </div>
             </div>
           </div>
+        ) : (
+          <div className="text-center py-20">
+            <div className="max-w-md mx-auto">
+              <div className="text-6xl mb-4">💳</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Credit Cards
+              </h3>
+              <p className="text-gray-600 mb-6">
+                Our comprehensive credit card options are coming soon. Stay tuned for exciting card options!
+              </p>
+              <div className="bg-blue-50 text-blue-600 px-4 py-2 rounded-full inline-block font-medium">
+                Coming Soon
+              </div>
+            </div>
+          </div>
         )}
-      </div>
+      </section>
     </div>
   );
 };

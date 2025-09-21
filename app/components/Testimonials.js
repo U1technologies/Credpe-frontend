@@ -1,45 +1,50 @@
+
+
 "use client";
 
 import { Card, CardContent } from "./ui/card";
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
+import { useRef } from "react";
 
 const Testimonials = () => {
-  const testimonials = [
-    {
-      name: "Priya Sharma",
-      role: "Business Owner",
-      location: "Mumbai",
-      rating: 5,
-      text: "CredPe.in made my business loan approval incredibly smooth. Got approved in just 2 days with competitive rates. Highly recommended!",
-      loanType: "Business Loan",
-    },
-    {
-      name: "Rajesh Kumar",
-      role: "Software Engineer",
-      location: "Bangalore",
-      rating: 5,
-      text: "Needed urgent funds for a family emergency. The personal loan process was hassle-free and money was in my account within hours.",
-      loanType: "Personal Loan",
-    },
-    {
-      name: "Sneha Patel",
-      role: "Teacher",
-      location: "Pune",
-      rating: 5,
-      text: "Finally bought my dream home with CredPe's home loan. Their team guided me through every step. Excellent customer service!",
-      loanType: "Home Loan",
-    },
-    {
-      name: "Amit Singh",
-      role: "Student",
-      location: "Delhi",
-      rating: 5,
-      text: "Education loan for my MBA was approved without any hassle. The interest rates were the best I found in the market.",
-      loanType: "Education Loan",
-    },
-  ];
+const testimonials = [
+  {
+    name: "Priya Sharma",
+    role: "Business Owner",
+    location: "Mumbai",
+    rating: 5,
+    text: "CredPe.in made my loan approval smooth and quick. Got funds in just 2 days at great rates.",
+    loanType: "Business Loan",
+  },
+  {
+    name: "Rajesh Kumar",
+    role: "Software Engineer",
+    location: "Bangalore",
+    rating: 5,
+    text: "Needed urgent funds for a family emergency. The process was hassle-free and money came fast.",
+    loanType: "Personal Loan",
+  },
+  {
+    name: "Sneha Patel",
+    role: "Teacher",
+    location: "Pune",
+    rating: 5,
+    text: "CredPe helped me buy my dream home. The process was smooth with the excellent support.",
+    loanType: "Home Loan",
+  },
+  {
+    name: "Amit Singh",
+    role: "Student",
+    location: "Delhi",
+    rating: 5,
+    text: "My MBA loan got approved easily with low rates. The entire process was quick and stress-free.",
+    loanType: "Education Loan",
+  },
+];
 
-  // ✅ Removed TS typing
+
+  const scrollRef = useRef(null);
+
   const renderStars = (rating) => {
     return [...Array(5)].map((_, i) => (
       <Star
@@ -51,86 +56,97 @@ const Testimonials = () => {
     ));
   };
 
+  const scroll = (direction) => {
+    if (scrollRef.current) {
+      const scrollAmount = 320; // adjust card width
+      scrollRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    <section className="bg-background">
+    <div className="bg-background relative w-[85%] mx-auto pb-12">
       <div className="container mx-auto">
         {/* Section Heading */}
         <div className="text-center mb-7">
           <h3 className="font-bold text-gray-800 mb-2">
             What Our Customers Say
           </h3>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-  Don&apos;t just take our word for it. Here&apos;s what thousands of satisfied
-  customers have to say about their loan experience with CredPe.in.
-</p>
-
+          <p className="text-muted-foreground max-w-3xl mx-auto">
+            See how CredPe.in has helped users make better loan choices.
+          </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {testimonials.map((testimonial) => (
-            <Card
-              key={testimonial.name}
-              className="group hover:shadow-medium transition-all duration-300 hover:-translate-y-1 gradient-card border-0 relative"
+        {/* Scrollable Testimonials */}
+        <div className="relative">
+          {/* Cards Row */}
+          <div
+            ref={scrollRef}
+            className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth"
+          >
+            {testimonials.map((testimonial) => (
+              <Card
+                key={testimonial.name}
+                className="w-[280px] md:w-[300px] h-[280px] max-md:h-[300px] flex-shrink-0 group hover:shadow-medium transition-all duration-300 gradient-card border border-black relative"
+              >
+                <CardContent className="p-6">
+                  {/* Quote Icon */}
+                  <div className="absolute top-4 right-4 opacity-40">
+                    <Quote className="w-6 h-6 text-primary" />
+                  </div>
+
+                  {/* Rating */}
+                  <div className="flex items-center mb-4">
+                    <div className="flex">{renderStars(testimonial.rating)}</div>
+                    <span className="ml-2 text-sm text-muted-foreground">
+                      ({testimonial.rating}.0)
+                    </span>
+                  </div>
+
+                  {/* Testimonial Text */}
+                  <p className="text-card-foreground mb-6 leading-relaxed text-sm">
+                    {`"${testimonial.text}"`}
+                  </p>
+
+                  {/* Customer Info */}
+                  <div className="space-y-1">
+                    <div className="font-semibold text-foreground">
+                      {testimonial.name}
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      {testimonial.role} • {testimonial.location}
+                    </div>
+                    <div className="inline-block px-2 py-1 bg-primary/10 text-primary text-xs rounded-full mt-2">
+                      {testimonial.loanType}
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Scroll Buttons at Bottom */}
+          <div className="flex justify-center gap-4 mt-6">
+            <button
+              onClick={() => scroll("left")}
+              className="bg-white border border-[#1b3a6a] rounded-full p-2 hover:bg-gray-100 shadow"
             >
-              <CardContent className="p-6">
-                {/* Quote Icon */}
-                <div className="absolute top-4 right-4 opacity-20">
-                  <Quote className="w-8 h-8 text-primary" />
-                </div>
-
-                {/* Rating */}
-                <div className="flex items-center mb-4">
-                  <div className="flex">{renderStars(testimonial.rating)}</div>
-                  <span className="ml-2 text-sm text-muted-foreground">
-                    ({testimonial.rating}.0)
-                  </span>
-                </div>
-
-                {/* Testimonial Text */}
-               <p className="text-card-foreground mb-6 leading-relaxed text-sm">
-  {`"${testimonial.text}"`}
-</p>
-
-
-                {/* Customer Info */}
-                <div className="space-y-1">
-                  <div className="font-semibold text-foreground">
-                    {testimonial.name}
-                  </div>
-                  <div className="text-sm text-muted-foreground">
-                    {testimonial.role} • {testimonial.location}
-                  </div>
-                  <div className="inline-block px-2 py-1 bg-primary/10 text-primary text-xs rounded-full mt-2">
-                    {testimonial.loanType}
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {/* Overall Stats */}
-        <div className="mt-16 text-center">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-            <div>
-              <div className="text-3xl font-bold text-primary mb-2">4.9/5</div>
-              <div className="text-muted-foreground">Average Rating</div>
-              <div className="flex justify-center mt-2">{renderStars(5)}</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-primary mb-2">98%</div>
-              <div className="text-muted-foreground">Customer Satisfaction</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-primary mb-2">15K+</div>
-              <div className="text-muted-foreground">5-Star Reviews</div>
-            </div>
+              <ChevronLeft className="w-5 h-5 text-primary" />
+            </button>
+            <button
+              onClick={() => scroll("right")}
+              className="bg-white border border-[#1b3a6a] rounded-full p-2 hover:bg-gray-100 shadow"
+            >
+              <ChevronRight className="w-5 h-5 text-primary" />
+            </button>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
 export default Testimonials;
+
