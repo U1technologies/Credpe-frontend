@@ -12,6 +12,9 @@ import loanImg from "../../../public/assets/loan-bg.png";
 import Image from "next/image";
 import loanContent from "@/app/content";
 import { useRef } from "react";
+import underline from '../../../public/assets/under-1.svg'
+import businessLoan from "../../../public/assets/business-1.png";
+import AutoScrollLogos from "@/app/components/LoanLogos";
 
 // Reusable Components
 const SectionNavigation = ({ sections, activeSection, onSectionClick }) => {
@@ -36,22 +39,22 @@ const SectionNavigation = ({ sections, activeSection, onSectionClick }) => {
   };
 
   return (
-    <div className="sticky top-20 z-40  w-[90%] rounded-full mx-auto bg-gray-100 border-b border-primary py-3 mt-6">
+    <div className="sticky top-20 z-40  w-[90%] max-md:w-[92%] rounded-full mx-auto bg-primary-light border !border-[#e3ecfa] py-2 mt-5 max-md:mt-2">
       <div className="container mx-auto px-2">
         <div className="relative flex items-center">
           {/* Left Chevron */}
           <button
             onClick={scrollLeft}
-            className="hidden md:flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors mr-2 flex-shrink-0"
+            className=" md:flex items-center justify-center w-8 h-8 rounded-full bg-primary-light hover:bg-gray-200 transition-colors mr-2 max-md:mr-0 flex-shrink-0"
             aria-label="Scroll left"
           >
-            <ChevronLeft className="w-4 h-4 text-gray-600" />
+            <ChevronLeft className="w-4 h-4 text-primary" />
           </button>
 
           {/* Scrollable Navigation */}
           <div 
             ref={scrollContainerRef}
-            className="flex overflow-x-auto  no-scrollbar scroll-smooth space-x-8 flex-1"
+            className="flex overflow-x-auto  no-scrollbar scroll-smooth space-x-8 max-md:space-x-4 flex-1"
           >
             {sections.map((section) => (
               <button
@@ -71,10 +74,10 @@ const SectionNavigation = ({ sections, activeSection, onSectionClick }) => {
           {/* Right Chevron */}
           <button
             onClick={scrollRight}
-            className="hidden md:flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors ml-2 flex-shrink-0"
+            className=" md:flex items-center justify-center w-8 h-8 rounded-full bg-primary-light hover:bg-gray-200 transition-colors ml-2 flex-shrink-0"
             aria-label="Scroll right"
           >
-            <ChevronRight className="w-4 h-4 text-gray-600" />
+            <ChevronRight className="w-4 h-4 text-primary" />
           </button>
         </div>
       </div>
@@ -86,9 +89,20 @@ const KeyHighlights = ({ highlights }) => (
   <section id="highlights" className="pt-10">
     <div className="container mx-auto px-4">
       <div className="mx-auto max-w-4xl">
-        <h3 className="font-bold text-center mb-6 text-gray-800">
-          Key Highlights of  Loan
-        </h3>
+        <div className="inline-block mb-4">
+    <h3 className="font-bold text-gray-800">
+                Key Highlights of{" "}
+ <span className="inline-block text-primary"> Business Loan
+        <Image 
+          src={underline} 
+          alt="" 
+          width={100}
+          height={10}
+          className="-mt-1"
+        />
+      </span>
+    </h3>
+  </div>
         <ul className="list-disc list-inside space-y-2 text-gray-700 ">
           {highlights.map((highlight, index) => (
             <li key={index}>{highlight}</li>
@@ -103,7 +117,20 @@ const BestBanks = ({ banks }) => (
   <section id="banks" className="py-10">
     <div className="container mx-auto px-4">
       <div className="max-w-6xl mx-auto">
-        <h3 className="font-bold text-center mb-6 text-gray-800">Best Banks & NBFCs Offering Business Loan</h3>
+                <div className="text-center mb-6">
+    <h3 className="font-bold text-gray-800">
+                Best Banks & NBFCs Offering{" "}
+ <span className="inline-block text-primary"> Business Loan
+        <Image 
+          src={underline} 
+          alt="" 
+          width={100}
+          height={10}
+          className="-mt-1"
+        />
+      </span>
+    </h3>
+  </div>
         <div className="overflow-x-auto">
           <table className="w-full bg-white rounded-lg overflow-hidden">
             <thead className="bg-primary text-white">
@@ -140,7 +167,20 @@ const Features = ({ features }) => {
     <section id="features" className="pb-10">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-          <h3 className="font-bold text-center mb-8 text-gray-800">Features & Benefits of Business Loan</h3>
+                          <div className="text-center mb-6">
+    <h3 className="font-bold text-gray-800">
+                Features & Benefits of{" "}
+ <span className="inline-block text-primary"> Business Loan
+        <Image 
+          src={underline} 
+          alt="" 
+          width={100}
+          height={10}
+          className="-mt-1"
+        />
+      </span>
+    </h3>
+  </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 px-6 max-md:px-0">
             {features.map((feature, index) => (
              <div key={index} className="flex justify-center">
@@ -183,9 +223,20 @@ const LoanTypes = ({ types }) => {
   return (
     <section id="types" className="pb-10">
       <div className="container mx-auto px-4">
-        <h3 className="font-bold text-center mb-8 text-gray-800">
-          Types of Business Loan
-        </h3>
+                       <div className="text-center mb-6">
+    <h3 className="font-bold text-gray-800">
+                Types of{" "}
+ <span className="inline-block text-primary"> Business Loan
+        <Image 
+          src={underline} 
+          alt="" 
+          width={100}
+          height={10}
+          className="-mt-1"
+        />
+      </span>
+    </h3>
+  </div>
 
         {/* Scrollable cards */}
         <div
@@ -235,7 +286,20 @@ const Eligibility = ({ eligibility, documents }) => {
     <section id="eligibility" className="pb-10">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h3 className="font-bold text-center mb-6 text-gray-800">Eligibility & Documents</h3>
+                          <div className="text-center mb-6">
+    <h3 className="font-bold text-gray-800">
+                Eligibility &{" "}
+ <span className="inline-block text-primary"> Documents
+        <Image 
+          src={underline} 
+          alt="" 
+          width={120}
+          height={10}
+          className="-mt-1"
+        />
+      </span>
+    </h3>
+  </div>
           
           {/* Tab Navigation */}
           <div className="flex justify-center mb-6">
@@ -243,7 +307,7 @@ const Eligibility = ({ eligibility, documents }) => {
               <button
                 className={`px-6 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                   activeTab === 'eligibility'
-                    ? 'bg-primary text-white'
+                    ? 'bg-sccent text-white'
                     : 'text-gray-600 hover:bg-gray-100'
                 }`}
                 onClick={() => setActiveTab('eligibility')}
@@ -253,7 +317,7 @@ const Eligibility = ({ eligibility, documents }) => {
               <button
                 className={`px-6 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                   activeTab === 'documents'
-                    ? 'bg-primary text-white'
+                    ? 'bg-accent text-white'
                     : 'text-gray-600 hover:bg-gray-100'
                 }`}
                 onClick={() => setActiveTab('documents')}
@@ -358,10 +422,24 @@ const ApplicationProcess = ({ steps }) => (
   <section id="application" className="pb-10">
     <div className="container mx-auto px-4">
       <div className="max-w-6xl mx-auto">
-        <h3 className="font-bold text-center mb-8 max-md:mb-4 text-gray-800">How to Apply for Business Loan</h3>
+                        <div className="text-center mb-6">
+    <h3 className="font-bold text-gray-800">
+                How to Apply for{" "}
+ <span className="inline-block text-primary"> Business Loan
+        <Image 
+          src={underline} 
+          alt="" 
+          width={100}
+          height={10}
+          className="-mt-1"
+        />
+      </span>
+    </h3>
+  </div>
+        {/* <h3 className="font-bold text-center mb-8 max-md:mb-4 text-gray-800">How to Apply for Business Loan</h3> */}
        
         {/* Desktop: Horizontal Timeline, Mobile: Vertical Timeline */}
-        <div className="relative bg-gray-100 py-10 px-8 max-md:py-4 max-md:px-4 rounded-xl">
+        <div className="relative bg-[#f7faff] py-10 px-8 max-md:py-4 max-md:px-4 rounded-xl">
           {/* Desktop Steps Grid */}
           <div className="hidden md:flex justify-between items-start relative max-w-5xl mx-auto">
             {/* Horizontal Connection Line */}
@@ -428,7 +506,7 @@ export default function BusinessLoan() {
     { id: "highlights", title: "Key Highlights" },
     { id: "banks", title: "Best Banks & NBFCs" },
     { id: "features", title: "Features & Benefits" },
-    { id: "types", title: "Types of Business Loan" },
+    { id: "types", title: "Types" },
     { id: "eligibility", title: "Eligibility Required" },
     { id: "application", title: "How to Apply" },
      { id: "calculator", title: "EMI Calculator" },
@@ -477,43 +555,80 @@ useEffect(() => {
     <div className="min-h-screen">
       <Header />
 
-     <div className="relative py-10 overflow-hidden">
-  {/* Background Image & Gradient */}
-  {/* <div className="absolute inset-0"> */}
-    <div className="absolute inset-0 bg-gradient-to-r from-primary/95 to-black/50" />
-  {/* </div> */}
-
-  {/* Content */}
-  <div className="container mx-auto px-4 relative z-10 max-w-6xl">
-    <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+<div className="relative py-10 bg-white">
+  <div className="container mx-auto px-4 relative z-10 max-w-5xl">
+    <div className="flex flex-col md:flex-row items-center md:items-start">
       
-      {/* Left Content */}
-     <div className="text-left text-primary-foreground">
-  <h2 className="font-bold text-3xl md:text-4xl mb-4">
-    {content.heroTitle}
-  </h2>
-  <p className="mb-8">
-    {content.heroSubtitle}
-  </p>
-  <Button variant="cta" size="lg" className="text-lg px-8 py-6">
-    Apply Now
-  </Button>
-</div>
-
-      {/* Right Image */}
-      <div className="flex justify-center md:justify-end">
-        <Image
-          src={personalLoanImg}
-          alt="Business Loan"
-          height={400}
-          width={400}
-          className="w-full max-w-md object-contain rounded-lg"
-        />
-      </div>
+{/* Mobile: Icon and Title in Same Row */}
+<div className="flex md:hidden items-start gap-4 w-full">
+  <div className="flex-shrink-0">
+    <div className="rounded-full bg-primary-light border !border-[#e3ecfa] p-6 flex items-center justify-center">
+      <Image
+        src={businessLoan}
+        alt="Business Loan"
+        width={50}
+        height={50}
+        className="object-contain"
+      />
     </div>
+  </div>
+  <div className="flex-1">
+    <span className="font-bold text-[30px] text-primary mb-2">
+      {content.heroTitle}
+    </span>
+    <p className="text-muted-foreground text-sm">
+      {content.heroSubtitle}
+    </p>
   </div>
 </div>
 
+{/* Desktop: Left Circle with Icon */}
+<div className="hidden md:flex flex-shrink-0">
+  <div className="rounded-full bg-primary-light border !border-[#e3ecfa] p-12 flex items-center justify-center">
+    <Image
+      src={businessLoan}
+      alt="Business Loan"
+      width={100}
+      height={100}
+      className="object-contain"
+    />
+  </div>
+</div>
+
+{/* Right Content */}
+<div className="w-full md:mt-0 md:ml-8 text-left">
+  
+  {/* Desktop: Title */}
+  <h2 className="hidden md:block font-bold text-3xl text-primary mb-2">
+    {content.heroTitle}
+  </h2>
+  
+  {/* Desktop: Subtitle */}
+  <p className="hidden md:block text-muted-foreground">
+    {content.heroSubtitle}
+  </p>
+
+  {/* AUTO-SCROLL LOGOS */}
+  <AutoScrollLogos logos={content.bestBanks} />
+
+  {/* Apply Now Button */}
+{/* Buttons */}
+<div className="flex gap-4 justify-start">
+  <Button variant="cta" size="sm">
+    Apply Now
+  </Button>
+  <Button
+    variant="outline"
+    size="sm"
+    className="!border-1.5px !border-[color:var(--primary)]"
+  >
+    Check Eligibility
+  </Button>
+</div>
+</div>
+    </div>
+  </div>
+</div>
 
       <SectionNavigation 
         sections={sections} 

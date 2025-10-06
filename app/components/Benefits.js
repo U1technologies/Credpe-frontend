@@ -1,7 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { Card, CardContent } from "./ui/card";
 import { Search, Zap, Shield, Calculator, Users, CheckCircle } from "lucide-react";
+import underline from '../../public/assets/under-1.svg'
 
 const Benefits = () => {
   const benefits = [
@@ -38,16 +40,23 @@ const Benefits = () => {
   ];
 
   return (
-    <section className="py-10 bg-background">
+    <section className="pb-20 max-md:pb-14 bg-background">
       <div className="container mx-auto">
         {/* Header */}
         <div className="section-heading text-center">
-          <h3 className="font-bold text-gray-800 mb-2">
-            Why Compare with CredPe.in?
-          </h3>
-          <p className="text-muted-foreground max-w-3xl mx-auto">
-           Save time and money with our instant loan comparison.
-          </p>
+                   <div className="inline-block">
+              <h3 className="font-bold text-gray-800">
+                Why Compare with <span className="inline-block text-primary">CredPe.in?
+                  <Image 
+                    src={underline} 
+                    alt="" 
+                    width={120}
+                    height={10}
+                    className="-mt-1"
+                  />
+                </span>
+              </h3>
+            </div>
         </div>
 
         {/* Benefits Grid */}
@@ -61,7 +70,7 @@ const Benefits = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Icon Container */}
-                <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-soft">
+                <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-accent flex items-center justify-center group-hover:scale-105 transition-transform duration-300 shadow-soft">
                   <IconComponent 
                     className="w-6 h-6 text-accent-foreground" 
                     strokeWidth={2}

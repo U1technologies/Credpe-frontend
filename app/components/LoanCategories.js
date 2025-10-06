@@ -15,6 +15,7 @@ import vehicleLoan from "../../public/assets/vehicle-loan.png";
 import educationLoan from "../../public/assets/education-loan.png";
 import medicalLoan from "../../public/assets/medical-loan.png";
 import transferLoan from "../../public/assets/transfer-loan.png";
+import underline from '../../public/assets/under-1.svg'
 
 const LoanCategories = () => {
   const [activeTab, setActiveTab] = useState("loans");
@@ -25,8 +26,8 @@ const LoanCategories = () => {
       image: personalLoan,
       href: "/loans/personal",
       applyHref: "/apply/personal",
-      badge: "Trending",
-      badgeColor: "bg-green-100 text-green-600",
+      badge: "Cashback Offer",
+      badgeColor: "bg-[#fcf4ed] text-[#ff6600]",
     },
     {
       name: "Business Loan",
@@ -34,15 +35,15 @@ const LoanCategories = () => {
       href: "/loans/business",
       applyHref: "/apply/business",
       badge: "Cashback Offer",
-      badgeColor: "bg-yellow-100 text-yellow-700",
+      badgeColor: "bg-[#fcf4ed] text-[#ff6600]",
     },
     {
       name: "Education Loan",
       image: educationLoan,
       href: "/loans/education",
       applyHref: "/apply/education",
-      badge: "2 Years",
-      badgeColor: "bg-gray-100 text-gray-700",
+      badge: "Trending",
+      badgeColor: "bg-[#caedd4] text-[#0e471e]",
     },
     {
       name: "Home Loan",
@@ -64,7 +65,7 @@ const LoanCategories = () => {
       href: "/loans/medical",
       applyHref: "/apply/medical",
       badge: "Special Offer",
-      badgeColor: "bg-pink-100 text-pink-600",
+      badgeColor: "bg-[#fcf4ed] text-[#ff6600]",
     },
     {
       name: "Gold Loan",
@@ -93,16 +94,28 @@ const LoanCategories = () => {
   ];
 
   return (
-    <div className="">
+    <div className="pb-20 max-md:pb-14">
       <section className="mx-auto">
         <div className="text-center mb-4">
-          <h3 className="font-bold text-gray-800">Popular Products</h3>
+<div className="inline-block">
+    <h3 className="font-bold text-gray-800">
+      Popular <span className="inline-block text-primary">Products
+        <Image 
+          src={underline} 
+          alt="" 
+          width={100}
+          height={10}
+          className="-mt-1"
+        />
+      </span>
+    </h3>
+  </div>
 
           {/* Tab Navigation */}
           <div className="flex justify-center mt-3 space-x-8">
             <button
               onClick={() => setActiveTab("loans")}
-              className={`pb-2 font-medium text-sm transition-all relative ${
+              className={`pb-1 font-medium text-sm transition-all relative ${
                 activeTab === "loans"
                   ? "text-[#0057d1] border-b-2 border-[#0057d1] font-semibold"
                   : "text-gray-600 hover:text-gray-900"
@@ -135,7 +148,7 @@ const LoanCategories = () => {
 
         {/* Loans Section */}
         {activeTab === "loans" ? (
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 max-md:gap-5">
             {loanTypes.map((loan) => (
               <div
                 key={loan.name}
@@ -153,7 +166,7 @@ const LoanCategories = () => {
                 {/* Top Section */}
                 <Link
                   href={loan.href}
-                  className="flex-1 flex flex-col items-center justify-center p-6"
+                  className="flex-1 flex flex-col items-center justify-center p-5 w-[200px]"
                 >
                   <div className="w-10 h-10 my-2">
                     <Image

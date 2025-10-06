@@ -1,10 +1,10 @@
-import { DollarSign, Clock, Shield, Home, Car, GraduationCap, Building, Heart, Coins, Percent, Calendar, RefreshCw, Receipt, Lock, Zap, Package } from "lucide-react";
+import { DollarSign, Clock, Shield, Home, Car, GraduationCap, Building, Heart, Coins, Percent, Calendar, RefreshCw, Receipt, Lock, Zap, Package, TrendingUp, Vault, EyeOff, Layers, ArrowLeftRight, Key, Activity, FileText, Shuffle, PlusCircle, Gauge, Laptop, ShieldCheck, Globe } from "lucide-react";
 
 export const loanContent = {
   personal: {
     title: "Personal Loan",
     heroTitle: "Personal Loan",
-    heroSubtitle: "Compare personal loan offers from multiple lenders. Check your rate without affecting your credit score.",
+    heroSubtitle: "Compare personal loan offers from multiple lenders.",
     keyStats: [
       { icon: DollarSign, title: "Up to ₹40 Lakhs", subtitle: "Loan Amount" },
       { icon: Clock, title: "30 Seconds", subtitle: "Quick Approval" },
@@ -22,6 +22,7 @@ export const loanContent = {
     bestBanks: [
       {
         bank: "HDFC Bank",
+        logo: "/assets/banks/hdfc.svg",
         loanAmount: "₹50k - ₹40L",
         interestRate: "10.8% - 13.5%",
         processingFee: "Up to ₹6,500 + GST",
@@ -29,6 +30,7 @@ export const loanContent = {
       },
       {
         bank: "IndusInd Bank",
+        logo: "/assets/banks/indusind.svg",
         loanAmount: "₹50k - ₹15L",
         interestRate: "10.49% - 28%",
         processingFee: "Up to 3.5% + GST",
@@ -36,6 +38,7 @@ export const loanContent = {
       },
       {
         bank: "Axis Bank",
+        logo: "/assets/banks/axis.svg",
         loanAmount: "₹50k - ₹40L",
         interestRate: "10.25% - 22%",
         processingFee: "Up to 2% + GST",
@@ -43,6 +46,7 @@ export const loanContent = {
       },
       {
         bank: "ICICI Bank",
+        logo: "/assets/banks/icici.svg",
         loanAmount: "₹30k - ₹50L",
         interestRate: "10.75% - 19%",
         processingFee: "Up to 2.5% + GST",
@@ -50,6 +54,7 @@ export const loanContent = {
       },
       {
         bank: "Bajaj Finserv",
+        logo: "/assets/banks/Bajaj_Finserv.svg",
         loanAmount: "₹20k - ₹55L",
         interestRate: "11% - 15%",
         processingFee: "Up to 3.93%",
@@ -167,6 +172,7 @@ export const loanContent = {
     bestBanks: [
       {
         bank: "SBI",
+        logo: "/assets/banks/sbi.svg",
         loanAmount: "₹1L - ₹10Cr",
         interestRate: "8.5% - 9.65%",
         processingFee: "0.35% + GST",
@@ -174,6 +180,7 @@ export const loanContent = {
       },
       {
         bank: "HDFC Bank",
+        logo: "/assets/banks/hdfc.svg",
         loanAmount: "₹1L - ₹10Cr",
         interestRate: "8.6% - 9.5%",
         processingFee: "Up to ₹3,000 + GST",
@@ -181,6 +188,7 @@ export const loanContent = {
       },
       {
         bank: "ICICI Bank",
+        logo: "/assets/banks/icici.svg",
         loanAmount: "₹1L - ₹10Cr",
         interestRate: "8.7% - 9.8%",
         processingFee: "0.5% + GST",
@@ -188,6 +196,7 @@ export const loanContent = {
       },
       {
         bank: "Axis Bank",
+        logo: "/assets/banks/axis.svg",
         loanAmount: "₹5L - ₹5Cr",
         interestRate: "8.75% - 9.65%",
         processingFee: "Up to ₹10,000 + GST",
@@ -195,6 +204,7 @@ export const loanContent = {
       },
       {
         bank: "LIC Housing Finance",
+         logo: "/assets/banks/lic.svg",
         loanAmount: "₹1L - ₹10Cr",
         interestRate: "8.6% - 9.4%",
         processingFee: "0.25% + GST",
@@ -281,7 +291,6 @@ export const loanContent = {
       "Submit application with required documents",
       "Property valuation and technical verification",
       "Legal verification and approval process",
-      "Loan sanction and disbursement as per stages"
     ],
     importantPoints: [
       "Ensure property has clear title and proper approvals",
@@ -314,6 +323,7 @@ export const loanContent = {
     bestBanks: [
       {
         bank: "HDFC Bank",
+        logo: "/assets/banks/hdfc.svg",
         loanAmount: "₹1L - ₹40L",
         interestRate: "11% - 21%",
         processingFee: "Up to 2% + GST",
@@ -321,6 +331,7 @@ export const loanContent = {
       },
       {
         bank: "ICICI Bank",
+        logo: "/assets/banks/icici.svg",
         loanAmount: "₹1L - ₹50L",
         interestRate: "11.25% - 20%",
         processingFee: "Up to 2.5% + GST",
@@ -328,6 +339,7 @@ export const loanContent = {
       },
       {
         bank: "Axis Bank",
+        logo: "/assets/banks/axis.svg",
         loanAmount: "₹50k - ₹75L",
         interestRate: "11.5% - 24%",
         processingFee: "Up to 3% + GST",
@@ -335,6 +347,7 @@ export const loanContent = {
       },
       {
         bank: "Bajaj Finserv",
+        logo: "/assets/banks/Bajaj_Finserv.svg",
         loanAmount: "₹1L - ₹45L",
         interestRate: "13% - 30%",
         processingFee: "Up to 4% + GST",
@@ -342,6 +355,7 @@ export const loanContent = {
       },
       {
         bank: "Tata Capital",
+        logo: "/assets/banks/tata-1.jpg",
         loanAmount: "₹75k - ₹25L",
         interestRate: "16% - 24%",
         processingFee: "Up to 5% + GST",
@@ -425,7 +439,6 @@ export const loanContent = {
       "Submit online application with business details",
       "Business verification and document scrutiny",
       "Credit assessment and approval decision",
-      "Loan agreement signing and fund disbursement"
     ],
     importantPoints: [
       "Maintain proper books of accounts and financial records",
@@ -458,6 +471,7 @@ export const loanContent = {
     bestBanks: [
       {
         bank: "HDFC Bank",
+        logo: "/assets/banks/hdfc.svg",
         loanAmount: "₹1L - ₹1Cr",
         interestRate: "7.5% - 13.75%",
         processingFee: "Up to ₹5,500 + GST",
@@ -465,6 +479,7 @@ export const loanContent = {
       },
       {
         bank: "ICICI Bank",
+        logo: "/assets/banks/icici.svg",
         loanAmount: "₹1L - ₹1Cr",
         interestRate: "7.75% - 14%",
         processingFee: "Up to ₹5,000 + GST",
@@ -472,6 +487,7 @@ export const loanContent = {
       },
       {
         bank: "Axis Bank",
+        logo: "/assets/banks/axis.svg",
         loanAmount: "₹1L - ₹75L",
         interestRate: "8% - 15%",
         processingFee: "Up to ₹7,500 + GST",
@@ -479,6 +495,7 @@ export const loanContent = {
       },
       {
         bank: "Mahindra Finance",
+        logo: "/assets/banks/mahindra.svg",
         loanAmount: "₹50k - ₹50L",
         interestRate: "8.5% - 18%",
         processingFee: "Up to 2% + GST",
@@ -486,36 +503,43 @@ export const loanContent = {
       },
       {
         bank: "Tata Motors Finance",
+          logo: "/assets/banks/tata-1.jpg",
         loanAmount: "₹1L - ₹35L",
         interestRate: "9% - 16%",
         processingFee: "Up to 3% + GST",
         maxTenure: "72 months"
       }
     ],
-    features: [
+ features: [
       {
         title: "Interest Rate",
-        description: "Competitive rates starting from 7.5% p.a. for new vehicles"
+        description: "Competitive rates starting from 7.5% p.a. for new vehicles",
+        icon: Percent
       },
       {
         title: "Loan Amount",
-        description: "Finance up to 90% of vehicle cost with flexible down payment options"
+        description: "Finance up to 90% of vehicle cost with flexible down payment options",
+        icon: DollarSign
       },
       {
         title: "Loan Tenure",
-        description: "Repayment period up to 84 months for comfortable EMIs"
+        description: "Repayment period up to 84 months for comfortable EMIs",
+        icon: Calendar
       },
       {
         title: "Vehicle Coverage",
-        description: "Covers cars, two-wheelers, commercial vehicles, and construction equipment"
+        description: "Covers cars, two-wheelers, commercial vehicles, and construction equipment",
+        icon: Car
       },
       {
         title: "Insurance Benefits",
-        description: "Comprehensive insurance options with easy claim settlement"
+        description: "Comprehensive insurance options with easy claim settlement",
+        icon: Shield
       },
       {
         title: "Prepayment Options",
-        description: "Part-payment and foreclosure facilities with minimal charges"
+        description: "Part-payment and foreclosure facilities with minimal charges",
+        icon: RefreshCw
       }
     ],
     loanTypes: [
@@ -566,7 +590,6 @@ export const loanContent = {
       "Submit application with necessary paperwork",
       "Vehicle valuation and document verification",
       "Loan approval and sanction letter",
-      "Complete purchase and loan disbursement"
     ],
     importantPoints: [
       "Compare interest rates from multiple lenders",
@@ -599,13 +622,15 @@ export const loanContent = {
     bestBanks: [
       {
         bank: "SBI",
+        logo: "/assets/banks/sbi.svg",
         loanAmount: "Up to ₹1.5Cr",
         interestRate: "8.5% - 11.5%",
         processingFee: "₹10,000 + GST",
         maxTenure: "15 years"
       },
       {
-        bank: "HDFC Credila",
+        bank: "HDFC",
+        logo: "/assets/banks/hdfc.svg",
         loanAmount: "Up to ₹1.5Cr",
         interestRate: "9% - 13.5%",
         processingFee: "1% + GST",
@@ -613,6 +638,7 @@ export const loanContent = {
       },
       {
         bank: "ICICI Bank",
+        logo: "/assets/banks/icici.svg",
         loanAmount: "Up to ₹1Cr",
         interestRate: "9.5% - 13.25%",
         processingFee: "1% + GST",
@@ -620,6 +646,7 @@ export const loanContent = {
       },
       {
         bank: "Axis Bank",
+        logo: "/assets/banks/axis.svg",
         loanAmount: "Up to ₹75L",
         interestRate: "10% - 14%",
         processingFee: "1% + GST",
@@ -627,38 +654,45 @@ export const loanContent = {
       },
       {
         bank: "Bank of Baroda",
+        logo: "/assets/banks/bob.svg",
         loanAmount: "Up to ₹1.5Cr",
         interestRate: "8.85% - 12%",
         processingFee: "₹7,500 + GST",
         maxTenure: "15 years"
       }
     ],
-    features: [
-      {
-        title: "Interest Rate",
-        description: "Competitive rates from 8.5% p.a. with special rates for premier institutions"
-      },
-      {
-        title: "Loan Coverage",
-        description: "100% financing for tuition fees plus additional amount for living expenses"
-      },
-      {
-        title: "Moratorium Period",
-        description: "No EMI during course duration plus 6 months or until job starts"
-      },
-      {
-        title: "Tax Benefits",
-        description: "Complete interest paid is deductible under Section 80E without any limit"
-      },
-      {
-        title: "Course Coverage",
-        description: "Covers technical, medical, management, and other professional courses"
-      },
-      {
-        title: "Geography",
-        description: "Covers studies in India and abroad in recognized institutions"
-      }
-    ],
+   features: [
+  {
+    title: "Interest Rate",
+    description: "Competitive rates from 8.5% p.a. with special rates for premier institutions",
+    icon: Percent
+  },
+  {
+    title: "Loan Coverage",
+    description: "100% financing for tuition fees plus additional amount for living expenses",
+    icon: Package
+  },
+  {
+    title: "Moratorium Period",
+    description: "No EMI during course duration plus 6 months or until job starts",
+    icon: Clock
+  },
+  {
+    title: "Tax Benefits",
+    description: "Complete interest paid is deductible under Section 80E without any limit",
+    icon: FileText
+  },
+  {
+    title: "Course Coverage",
+    description: "Covers technical, medical, management, and other professional courses",
+    icon: GraduationCap
+  },
+  {
+    title: "Geography",
+    description: "Covers studies in India and abroad in recognized institutions",
+    icon: Globe
+  }
+],
     loanTypes: [
       {
         name: "Domestic Education Loan",
@@ -704,7 +738,6 @@ export const loanContent = {
       "Submit loan application with co-applicant details",
       "Document verification and income assessment",
       "Collateral evaluation (if applicable)",
-      "Loan approval and disbursement as per schedule"
     ],
     importantPoints: [
       "Apply early after getting admission confirmation",
@@ -737,6 +770,7 @@ export const loanContent = {
     bestBanks: [
       {
         bank: "HDFC Bank",
+        logo: "/assets/banks/hdfc.svg",
         loanAmount: "₹50k - ₹25L",
         interestRate: "12% - 18%",
         processingFee: "Up to 2% + GST",
@@ -744,6 +778,7 @@ export const loanContent = {
       },
       {
         bank: "ICICI Bank",
+        logo: "/assets/banks/icici.svg",
         loanAmount: "₹25k - ₹20L",
         interestRate: "12.5% - 19%",
         processingFee: "Up to 2.5% + GST",
@@ -751,6 +786,7 @@ export const loanContent = {
       },
       {
         bank: "Bajaj Finserv",
+        logo: "/assets/banks/Bajaj_Finserv.svg",
         loanAmount: "₹1L - ₹25L",
         interestRate: "13% - 24%",
         processingFee: "Up to 4% + GST",
@@ -758,43 +794,51 @@ export const loanContent = {
       },
       {
         bank: "Tata Capital",
+          logo: "/assets/banks/tata-1.jpg",
         loanAmount: "₹50k - ₹15L",
         interestRate: "14% - 22%",
         processingFee: "Up to 3% + GST",
         maxTenure: "48 months"
       },
       {
-        bank: "Fullerton India",
+        bank: "Kotak Mahindra Bank",
+        logo: "/assets/banks/kotak.svg",
         loanAmount: "₹30k - ₹20L",
         interestRate: "15% - 25%",
         processingFee: "Up to 5% + GST",
         maxTenure: "60 months"
       }
     ],
-    features: [
+ features: [
       {
         title: "Emergency Processing",
-        description: "Instant approval within 2 hours for medical emergencies"
+        description: "Instant approval within 2 hours for medical emergencies",
+        icon: Zap
       },
       {
         title: "Treatment Coverage",
-        description: "Covers all medical treatments, surgeries, and hospitalization costs"
+        description: "Covers all medical treatments, surgeries, and hospitalization costs",
+        icon: Heart
       },
       {
         title: "Flexible Repayment",
-        description: "EMI tenure from 12 to 60 months based on loan amount"
+        description: "EMI tenure from 12 to 60 months based on loan amount",
+        icon: Calendar
       },
       {
         title: "No Collateral",
-        description: "Unsecured loans up to ₹5 lakhs without any collateral"
+        description: "Unsecured loans up to ₹5 lakhs without any collateral",
+        icon: Lock
       },
       {
         title: "Digital Process",
-        description: "Complete online application and approval process"
+        description: "Complete online application and approval process",
+        icon: Package
       },
       {
         title: "Insurance Options",
-        description: "Additional health insurance coverage available"
+        description: "Additional health insurance coverage available",
+        icon: Shield
       }
     ],
     loanTypes: [
@@ -845,7 +889,6 @@ export const loanContent = {
       "Quick verification and credit assessment",
       "Instant approval and sanction letter",
       "Direct payment to hospital or cash disbursement",
-      "Start EMI as per agreed schedule"
     ],
     importantPoints: [
       "Keep all medical documents and estimates ready",
@@ -878,6 +921,7 @@ export const loanContent = {
     bestBanks: [
       {
         bank: "SBI",
+          logo: "/assets/banks/sbi.svg",
         loanAmount: "₹20k - ₹35L",
         interestRate: "7% - 9.6%",
         processingFee: "0.5% + GST",
@@ -885,6 +929,7 @@ export const loanContent = {
       },
       {
         bank: "HDFC Bank",
+        logo: "/assets/banks/hdfc.svg",
         loanAmount: "₹25k - ₹1Cr",
         interestRate: "8.5% - 12%",
         processingFee: "0.5% + GST",
@@ -892,6 +937,7 @@ export const loanContent = {
       },
       {
         bank: "ICICI Bank",
+        logo: "/assets/banks/icici.svg",
         loanAmount: "₹10k - ₹2Cr",
         interestRate: "9% - 13%",
         processingFee: "1% + GST",
@@ -899,6 +945,7 @@ export const loanContent = {
       },
       {
         bank: "Muthoot Finance",
+        logo: "/assets/banks/muthoot.svg",
         loanAmount: "₹1k - ₹1Cr",
         interestRate: "12% - 26%",
         processingFee: "1% + GST",
@@ -906,38 +953,45 @@ export const loanContent = {
       },
       {
         bank: "Manappuram Finance",
+        logo: "/assets/banks/Manappuram.png",
         loanAmount: "₹1.5k - ₹1Cr",
         interestRate: "12% - 24%",
         processingFee: "1% + GST",
         maxTenure: "36 months"
       }
     ],
-    features: [
-      {
-        title: "Instant Processing",
-        description: "Get loan approved and disbursed within 30 minutes"
-      },
-      {
-        title: "High Loan Value",
-        description: "Get up to 85% of current gold market value"
-      },
-      {
-        title: "Secure Storage",
-        description: "Gold jewelry stored safely in bank lockers with insurance"
-      },
-      {
-        title: "No Credit Check",
-        description: "No income proof or credit score verification required"
-      },
-      {
-        title: "Flexible Tenure",
-        description: "Choose repayment period from 6 to 36 months"
-      },
-      {
-        title: "Part Payment",
-        description: "Option for partial payment to reduce interest burden"
-      }
-    ],
+   features: [
+  {
+    title: "Instant Processing",
+    description: "Get loan approved and disbursed within 30 minutes",
+    icon: Clock  
+  },
+  {
+    title: "High Loan Value",
+    description: "Get up to 85% of current gold market value",
+    icon: TrendingUp
+  },
+  {
+    title: "Secure Storage",
+    description: "Gold jewelry stored safely in bank lockers with insurance",
+    icon: Vault
+  },
+  {
+    title: "No Credit Check",
+    description: "No income proof or credit score verification required",
+    icon: EyeOff
+  },
+  {
+    title: "Flexible Tenure",
+    description: "Choose repayment period from 6 to 36 months",
+    icon: Layers
+  },
+  {
+    title: "Part Payment",
+    description: "Option for partial payment to reduce interest burden",
+    icon: ArrowLeftRight
+  }
+],
     loanTypes: [
       {
         name: "Regular Gold Loan",
@@ -983,7 +1037,6 @@ export const loanContent = {
       "Loan amount calculation based on current rates",
       "Complete application form and documentation",
       "Instant approval and loan agreement signing",
-      "Cash disbursement and gold storage in locker"
     ],
     importantPoints: [
       "Carry original purchase bills for better rates",
@@ -1016,6 +1069,7 @@ export const loanContent = {
     bestBanks: [
       {
         bank: "HDFC Bank",
+        logo: "/assets/banks/hdfc.svg",
         loanAmount: "₹10L - ₹5Cr",
         interestRate: "8.5% - 11.5%",
         processingFee: "Up to 1% + GST",
@@ -1023,6 +1077,7 @@ export const loanContent = {
       },
       {
         bank: "ICICI Bank",
+        logo: "/assets/banks/icici.svg",
         loanAmount: "₹5L - ₹5Cr",
         interestRate: "8.75% - 12%",
         processingFee: "Up to 1% + GST",
@@ -1030,6 +1085,7 @@ export const loanContent = {
       },
       {
         bank: "Axis Bank",
+        logo: "/assets/banks/axis.svg",
         loanAmount: "₹5L - ₹5Cr",
         interestRate: "9% - 12.5%",
         processingFee: "Up to 2% + GST",
@@ -1037,6 +1093,7 @@ export const loanContent = {
       },
       {
         bank: "SBI",
+          logo: "/assets/banks/sbi.svg",
         loanAmount: "₹1L - ₹5Cr",
         interestRate: "8.65% - 11.15%",
         processingFee: "0.35% + GST",
@@ -1044,38 +1101,45 @@ export const loanContent = {
       },
       {
         bank: "Bajaj Housing Finance",
+        logo: "/assets/banks/Bajaj_Finserv.svg",
         loanAmount: "₹10L - ₹5Cr",
         interestRate: "9% - 13%",
         processingFee: "Up to 3% + GST",
         maxTenure: "20 years"
       }
     ],
-    features: [
-      {
-        title: "High Loan Amount",
-        description: "Get up to 70% of property market value as loan amount"
-      },
-      {
-        title: "Retain Ownership",
-        description: "Continue living in or using your property while repaying loan"
-      },
-      {
-        title: "Multipurpose Usage",
-        description: "Use loan amount for any personal or business requirement"
-      },
-      {
-        title: "Long Tenure",
-        description: "Extended repayment period up to 20 years for lower EMIs"
-      },
-      {
-        title: "Tax Benefits",
-        description: "Interest paid is tax deductible for business purposes"
-      },
-      {
-        title: "Balance Transfer",
-        description: "Transfer existing property loans for better rates"
-      }
-    ],
+   features: [
+    {
+      title: "High Loan Amount",
+      description: "Get up to 70% of property market value as loan amount",
+      icon: Building
+    },
+    {
+      title: "Retain Ownership",
+      description: "Continue living in or using your property while repaying loan",
+      icon: Key
+    },
+    {
+      title: "Multipurpose Usage",
+      description: "Use loan amount for any personal or business requirement",
+      icon: Activity
+    },
+    {
+      title: "Long Tenure",
+      description: "Extended repayment period up to 20 years for lower EMIs",
+      icon: Clock
+    },
+    {
+      title: "Tax Benefits",
+      description: "Interest paid is tax deductible for business purposes",
+      icon: FileText
+    },
+    {
+      title: "Balance Transfer",
+      description: "Transfer existing property loans for better rates",
+      icon: Shuffle
+    }
+  ],
     loanTypes: [
       {
         name: "Residential Property Loan",
@@ -1136,7 +1200,7 @@ export const loanContent = {
     ]
   },
 
-car: {
+  car: {
     title: "Loan Against Car",
     heroTitle: "Loan Against Car",
     heroSubtitle: "Get quick loans using your car as collateral. Compare rates from multiple lenders without hassle.",
@@ -1157,6 +1221,7 @@ car: {
     bestBanks: [
       {
         bank: "HDFC Bank",
+        logo: "/assets/banks/hdfc.svg",
         loanAmount: "₹1L - ₹50L",
         interestRate: "9% - 16%",
         processingFee: "Up to 2% + GST",
@@ -1164,6 +1229,7 @@ car: {
       },
       {
         bank: "ICICI Bank",
+        logo: "/assets/banks/icici.svg",
         loanAmount: "₹50k - ₹40L",
         interestRate: "9.5% - 17%",
         processingFee: "Up to 2.5% + GST",
@@ -1171,6 +1237,7 @@ car: {
       },
       {
         bank: "Bajaj Finserv",
+        logo: "/assets/banks/Bajaj_Finserv.svg",
         loanAmount: "₹25k - ₹25L",
         interestRate: "11% - 20%",
         processingFee: "Up to 4% + GST",
@@ -1178,6 +1245,7 @@ car: {
       },
       {
         bank: "Tata Capital",
+          logo: "/assets/banks/tata-1.jpg",
         loanAmount: "₹30k - ₹30L",
         interestRate: "12% - 18%",
         processingFee: "Up to 3% + GST",
@@ -1185,38 +1253,45 @@ car: {
       },
       {
         bank: "Mahindra Finance",
+          logo: "/assets/banks/mahindra.svg",
         loanAmount: "₹50k - ₹35L",
         interestRate: "10% - 19%",
         processingFee: "Up to 3% + GST",
         maxTenure: "60 months"
       }
     ],
-    features: [
-      {
-        title: "Keep Using Car",
-        description: "Continue driving your car while the loan is active"
-      },
-      {
-        title: "Quick Valuation",
-        description: "Fast car valuation and instant loan amount calculation"
-      },
-      {
-        title: "High Loan Value",
-        description: "Get up to 70% of current market value of your car"
-      },
-      {
-        title: "Flexible Usage",
-        description: "Use loan amount for any personal or business purpose"
-      },
-      {
-        title: "Digital Process",
-        description: "Complete online application and approval process"
-      },
-      {
-        title: "Insurance Protected",
-        description: "Car insurance ensures protection during loan tenure"
-      }
-    ],
+   features: [
+  {
+    title: "Keep Using Car",
+    description: "Continue driving your car while the loan is active",
+    icon: Car
+  },
+  {
+    title: "Quick Valuation",
+    description: "Fast car valuation and instant loan amount calculation",
+    icon: Gauge
+  },
+  {
+    title: "High Loan Value",
+    description: "Get up to 70% of current market value of your car",
+    icon: TrendingUp
+  },
+  {
+    title: "Flexible Usage",
+    description: "Use loan amount for any personal or business purpose",
+    icon: Shuffle
+  },
+  {
+    title: "Digital Process",
+    description: "Complete online application and approval process",
+    icon: Laptop
+  },
+  {
+    title: "Insurance Protected",
+    description: "Car insurance ensures protection during loan tenure",
+    icon: ShieldCheck
+  }
+],
     loanTypes: [
       {
         name: "Personal Car Loan",
@@ -1265,7 +1340,6 @@ car: {
       "Document verification and credit check",
       "Loan approval and amount confirmation",
       "Car hypothecation and agreement signing",
-      "Loan disbursement and continued car usage"
     ],
     importantPoints: [
       "Ensure car insurance is valid and updated",
@@ -1275,7 +1349,154 @@ car: {
       "Check for prepayment and foreclosure charges",
       "Maintain car in good condition during loan tenure"
     ]
-  }
+  },
+  transferHomeLoan: {
+  title: "Transfer Home Loan",
+  heroTitle: "Transfer Home Loan",
+  heroSubtitle: "Switch your existing home loan to a better deal with lower EMIs and improved terms. Save more without hassle.",
+  keyStats: [
+    { icon: RefreshCw, title: "Up to ₹10 Crores", subtitle: "Transfer Amount" },
+    { icon: Clock, title: "5-7 Days", subtitle: "Quick Processing" },
+    { icon: Shield, title: "8.4% p.a.", subtitle: "Starting Rate" }
+  ],
+  keyHighlights: [
+    "Lower interest rates starting from 8.4% per annum",
+    "Transfer your existing home loan balance up to ₹10 crores",
+    "Flexible repayment tenure up to 30 years",
+    "Top-up loan facility available with transfer",
+    "Minimal documentation and quick approval process",
+    "Save on EMIs by moving to better terms",
+    "No impact on property ownership or title"
+  ],
+  bestBanks: [
+    {
+      bank: "SBI",
+      logo: "/assets/banks/sbi.svg",
+      loanAmount: "₹1L - ₹10Cr",
+      interestRate: "8.4% - 9.5%",
+      processingFee: "0.25% - 0.35% + GST",
+      maxTenure: "30 years"
+    },
+    {
+      bank: "HDFC Bank",
+      logo: "/assets/banks/hdfc.svg",
+      loanAmount: "₹1L - ₹10Cr",
+      interestRate: "8.5% - 9.4%",
+      processingFee: "Up to ₹3,000 + GST",
+      maxTenure: "30 years"
+    },
+    {
+      bank: "ICICI Bank",
+      logo: "/assets/banks/icici.svg",
+      loanAmount: "₹1L - ₹10Cr",
+      interestRate: "8.6% - 9.7%",
+      processingFee: "0.5% + GST",
+      maxTenure: "30 years"
+    },
+    {
+      bank: "Axis Bank",
+      logo: "/assets/banks/axis.svg",
+      loanAmount: "₹5L - ₹5Cr",
+      interestRate: "8.7% - 9.6%",
+      processingFee: "Up to ₹10,000 + GST",
+      maxTenure: "30 years"
+    },
+    {
+      bank: "LIC Housing Finance",
+      logo: "/assets/banks/lic.svg",
+      loanAmount: "₹1L - ₹10Cr",
+      interestRate: "8.5% - 9.3%",
+      processingFee: "0.25% + GST",
+      maxTenure: "30 years"
+    }
+  ],
+  features: [
+    {
+      title: "Lower Interest Rate",
+      description: "Save on EMIs by switching to a lower interest rate with floating/fixed options",
+      icon: Percent
+    },
+    {
+      title: "Top-Up Facility",
+      description: "Option to avail additional top-up loan along with transfer for personal/renovation needs",
+      icon: PlusCircle
+    },
+    {
+      title: "Flexible Tenure",
+      description: "Extend or reduce your repayment tenure up to 30 years for convenient EMIs",
+      icon: Calendar
+    },
+    {
+      title: "Minimal Documentation",
+      description: "Simplified paperwork for transferring your existing loan balance",
+      icon: FileText
+    },
+    {
+      title: "Fast Approval",
+      description: "Quick disbursal and processing within 5-7 working days",
+      icon: Zap
+    },
+    {
+      title: "Tax Benefits",
+      description: "Continue to avail deductions on principal and interest payments",
+      icon: Receipt
+    }
+  ],
+  loanTypes: [
+    {
+      name: "Standard Balance Transfer",
+      description: "Switch your existing home loan from one bank/NBFC to another for lower interest rates and better terms"
+    },
+    {
+      name: "Balance Transfer with Top-Up Loan",
+      description: "Transfer your loan and avail additional funds for renovation, furnishing, or personal needs"
+    },
+    {
+      name: "Balance Transfer for Under-Construction Property",
+      description: "Move your ongoing loan for an under-construction property to another lender for better terms"
+    },
+    {
+      name: "Balance Transfer for Completed Property",
+      description: "Shift your loan for ready-to-move or completed homes and reduce EMI burden"
+    },
+    {
+      name: "Balance Transfer with EMI Restructuring",
+      description: "Choose to extend or reduce tenure while transferring your loan to suit your monthly budget"
+    },
+  ],
+  eligibility: {
+    age: "21 to 65 years (at loan maturity)",
+    income: "₹25,000 per month minimum",
+    employment: "Salaried/Self-employed/Professional with stable income",
+    creditScore: "750 and above preferred",
+    documents: "Existing loan account statement and property documents required"
+  },
+  documents: {
+    identity: ["PAN Card", "Aadhaar Card", "Passport", "Driving License"],
+    income: {
+      salaried: ["Last 6 months salary slips", "Form 16 for 2 years", "Bank statements"],
+      selfEmployed: ["ITR for 3 years", "Audited financials", "Bank statements", "Business proof documents"]
+    },
+    property: ["Sale deed", "Property papers", "Previous bank loan documents", "NOC from existing lender"],
+    others: ["Application form", "Passport size photos", "Processing fee payment"]
+  },
+  applicationSteps: [
+    "Check eligibility and compare transfer offers",
+    "Apply for balance transfer with chosen bank",
+    "Submit existing loan documents and property details",
+    "Verification by new lender (legal & technical check)",
+    "Loan sanction and balance transfer approval",
+  ],
+  importantPoints: [
+    "Ensure no hidden charges while transferring loan",
+    "Compare interest savings vs processing fees",
+    "Maintain good repayment history for smooth transfer",
+    "Check foreclosure terms of your existing loan",
+    "Opt for top-up if additional funds are required",
+    "Choose floating or fixed rates depending on market outlook"
+  ]
+}
+  
 };
 
 export default loanContent;

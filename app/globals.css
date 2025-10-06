@@ -10,16 +10,16 @@
   --popover-foreground: #1a1a1a;
   
   /* Primary: Professional Blue */
-  --primary: #1b3a6a;
+  --primary: #0e499c;
   --primary-foreground: #ffffff;
-  --primary-hover: #1E3A8A;
-  --primary-light: #DBEAFE;
+  --primary-hover: #04224b;
+  --primary-light: #f2f7ff;
   
   /* Accent: Energetic Orange (for buttons and highlights) */
-  --accent: #1b3a6a;
+  --accent: #ff914d;
   --accent-foreground: #ffffff;
   --accent-hover: #EA580C;
-  --accent-light: #FED7AA;
+  --accent-light: #fff9f2;
   
   /* Neutral Colors */
   --secondary: #F8FAFC;
@@ -27,8 +27,8 @@
   --muted: #F1F5F9;
   --muted-foreground: #64748B;
   --border: #E2E8F0;
-  --input: #206de7;
-  --ring: #1E40AF;
+  --input: #0E489B;
+  --ring: #0E489B;
   --radius: 0.75rem;
   
   /* Status Colors */
@@ -313,8 +313,8 @@ label {
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  border-color: var(--primary);
+  /* box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); */
+  border-color: var(--accent);
 }
 
 .card::before {
@@ -323,7 +323,7 @@ label {
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
+  height: 0px;
   background: var(--primary); /* Blue accent line */
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -557,4 +557,32 @@ label {
   background: white;
   border-bottom: 1px solid #e5e7eb;
 }
+
+.scroll-track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: scroll-x 25s linear infinite;
+  position: relative;
+}
+
+.scroll-track::after {
+  content: attr(data-content);
+  position: absolute;
+  left: 100%;
+  display: flex;
+  gap: 2rem;
+  animation: scroll-x 25s linear infinite;
+}
+
+/* Animation */
+@keyframes scroll-x {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 

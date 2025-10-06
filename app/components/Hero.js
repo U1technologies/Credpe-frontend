@@ -124,7 +124,7 @@ useEffect(() => {
 }, [isDragging, handleMouseMove, handleMouseUp]); // Add missing dependencies
 
   return (
-    <div className="relative min-h-[50vh] max-md:min-h-[45vh] max-md:my-2 flex flex-col items-center justify-center overflow-hidden">
+    <div className="relative min-h-[60vh] max-md:min-h-[45vh] max-md:mt-2 max-md:mb-7 flex flex-col items-center justify-center overflow-hidden">
       {/* Hero Content */}
       <div className="w-[85%] max-md:w-[95%] mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -141,10 +141,11 @@ useEffect(() => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               {/* Credit Score and Eligibility buttons for desktop */}
-              <div className="flex items-center justify-between bg-accent text-white px-6 py-2 rounded-full shadow-md w-[240px] cursor-pointer transition">
+              <Link href="/credit-score">
+              <div className="flex items-center justify-between bg-primary text-white px-6 py-2 rounded-full shadow-md w-[240px] cursor-pointer transition">
                 <div>
-                  <span className="font-medium text-sm">Free Credit</span>
-                  <div className="text-[10px]">Get Your Free Credit Score Here!</div>
+                  <span className="font-medium text-sm">Credit Score</span>
+                  <div className="text-[10px]">Check Your Free Credit Score!</div>
                 </div>
                 <Image
                   src={creditScoreIcon}
@@ -153,8 +154,9 @@ useEffect(() => {
                   height={35}
                 />
               </div>
+              </Link>
               <Link href="/eligibility-check">
-              <div className="flex items-center justify-between bg-accent text-white px-6 py-2 rounded-full shadow-md w-[240px] cursor-pointer transition">
+              <div className="flex items-center justify-between bg-primary text-white px-6 py-2 rounded-full shadow-md w-[240px] cursor-pointer transition">
                 <div>
                   <span className="font-medium text-sm">Check Eligibility</span>
                   <div className="text-[10px]">Get Your Loan Eligibility Now!</div>
@@ -224,7 +226,8 @@ useEffect(() => {
         <div className="hidden"></div>
         <div className="mt-4 flex flex-col sm:flex-row justify-center items-center gap-3 w-[90%] mx-auto md:hidden">
               {/* Free Credit Score */}
-              <div className="flex items-center justify-between bg-accent text-white px-6 py-2 rounded-full shadow-md w-full sm:w-[300px] cursor-pointer transition">
+              <Link href="/credit-score">
+              <div className="flex items-center justify-between bg-primary text-white px-6 py-2 rounded-full shadow-md w-full sm:w-[300px] cursor-pointer transition">
                 <div>
                   <p className="font-medium">Free Credit Score</p>
                   <div className="text-[10px]">Get Your Free Credit Score Here!</div>
@@ -236,9 +239,11 @@ useEffect(() => {
                   height={45}
                 />
               </div>
+              </Link>
 
               {/* Check Eligibility */}
-              <div className="flex items-center justify-between bg-accent text-white px-6 py-2 rounded-full shadow-md w-full sm:w-[300px] cursor-pointer transition">
+              <Link href="/eligibility-check">
+              <div className="flex items-center justify-between bg-primary text-white px-6 py-2 rounded-full shadow-md w-full sm:w-[300px] cursor-pointer transition">
                 <div>
                   <p className="font-medium">Check Eligibility</p>
                   <div className="text-[10px]">Get Your Loan Eligibility Now!</div>
@@ -250,6 +255,7 @@ useEffect(() => {
                   height={45}
                 />
               </div>
+              </Link>
             </div>
       </div>
     </div>

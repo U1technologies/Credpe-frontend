@@ -5,6 +5,8 @@
 import { Card, CardContent } from "./ui/card";
 import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { useRef } from "react";
+import underline from '../../public/assets/under-1.svg'
+import Image from "next/image";
 
 const Testimonials = () => {
 const testimonials = [
@@ -67,16 +69,23 @@ const testimonials = [
   };
 
   return (
-    <div className="bg-background relative w-[85%] mx-auto pb-12">
+    <div className="bg-background relative w-[85%] mx-auto pb-20 max-md:pb-14">
       <div className="container mx-auto">
         {/* Section Heading */}
         <div className="text-center mb-7">
-          <h3 className="font-bold text-gray-800 mb-2">
-            What Our Customers Say
-          </h3>
-          <p className="text-muted-foreground max-w-3xl mx-auto">
-            See how CredPe.in has helped users make better loan choices.
-          </p>
+                  <div className="inline-block">
+              <h3 className="font-bold text-gray-800">
+                 What Our <span className="inline-block text-primary">Customers Say
+                  <Image 
+                    src={underline} 
+                    alt="" 
+                    width={160}
+                    height={10}
+                    className="-mt-1"
+                  />
+                </span>
+              </h3>
+            </div>
         </div>
 
         {/* Scrollable Testimonials */}
@@ -118,7 +127,7 @@ const testimonials = [
                     <div className="text-sm text-muted-foreground">
                       {testimonial.role} • {testimonial.location}
                     </div>
-                    <div className="inline-block px-2 py-1 bg-primary/10 text-primary text-xs rounded-full mt-2">
+                    <div className="inline-block px-2 py-1 bg-accent/10 text-primary text-xs !text-accent rounded-full mt-2">
                       {testimonial.loanType}
                     </div>
                   </div>
