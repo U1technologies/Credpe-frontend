@@ -243,8 +243,9 @@ export default function OffersPage() {
           className="bg-primary-light rounded-2xl border border-primary p-8 text-center"
         >
           <h3 className="text-xl font-bold text-gray-800 mb-4">
-            Partnered with India's Leading Banks
-          </h3>
+  Partnered with India&apos;s Leading Banks
+</h3>
+
           <div className="flex flex-wrap justify-center gap-4">
             {['HDFC Bank', 'ICICI Bank', 'SBI Card', 'Axis Bank', 'Bajaj Finserv', 'Kotak Mahindra'].map((bank) => (
               <div

@@ -58,7 +58,10 @@ const ThankYou = ({ applicationId, onViewDocuments, onExploreLoanOptions }) => {
       <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2.5"></div>
       <div>
         <p className="font-medium text-foreground">NBFC Partner Matching</p>
-        <p className="text-sm text-muted-foreground">We'll match you with the best NBFC partners based on your profile.</p>
+        <p className="text-sm text-muted-foreground">
+  We&apos;ll match you with the best NBFC partners based on your profile.
+</p>
+
       </div>
     </div>
     

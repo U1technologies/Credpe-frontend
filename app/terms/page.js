@@ -29,9 +29,9 @@ export default function TermsOfUse() {
           >
             www.credpe.in
           </a>{" "}
-          and its Mobile Application (collectively referred to as "Website"),
+          and its Mobile Application (collectively referred to as &quot;Website&quot;),
           which is managed and operated by U1 Technologies Private Limited
-          (hereinafter referred to as "Company"/ "Credpe"), incorporated under
+          (hereinafter referred to as &quot;Company&quot;/ &quot;Credpe&quot;), incorporated under
           the laws of India and registered under the Companies Act, 2013.
         </p>
 
@@ -46,14 +46,13 @@ export default function TermsOfUse() {
         </p>
 
         <p className="mb-4">
-          By accessing this Website or registering your information on the
-          Website, the users (hereinafter referred to as "you" or "your") agree
-          to be bound by these Terms of Use ("TOU"). This Agreement along with
+          By accessing this Website or registering your information on the Website, the users (hereinafter referred to as &quot;you&quot; or &quot;your&quot;) agree
+          to be bound by these Terms and Conditions (&quot;T&C&quot;). This Agreement along with
           the Privacy Policy and Disclaimer describes our relationship with you
           and will be subject to the rules, guidelines, policies, terms, and
           conditions applicable to any specific Service that is provided by this
-          Website. They shall be deemed to be incorporated into this TOU and
-          shall be considered as part and parcel of this TOU.
+          Website. They shall be deemed to be incorporated into this T&C and
+          shall be considered as part and parcel of this T&C.
         </p>
 
         <p className="mb-4 font-medium">
@@ -225,8 +224,7 @@ export default function TermsOfUse() {
               </h4>
             </div>
             <p>
-              The Website and services are provided on an "as is" and "as
-              available" basis. Credpe does not warrant that the Website will be
+              The Website and services are provided on an &quot;as is&quot; and &quot;as available&quot; basis. Credpe does not warrant that the Website will be
               uninterrupted, secure, or error-free. We disclaim all warranties
               of any kind, express or implied, including merchantability and
               fitness for a particular purpose.
