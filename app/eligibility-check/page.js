@@ -275,7 +275,7 @@ const EligibilityCalculator = () => {
 
         {/* Right Result */}
 {/* Right Result */}
-<Card className="flex flex-col items-center justify-center text-center space-y-6 relative">
+<Card className="flex flex-col items-center justify-center text-center space-y-6 relative py-0 max-lg:py-8">
   <h3 className="text-xl font-semibold mb-4">Your Loan Eligibility</h3>
 
   <div className="relative w-60 h-60 flex items-center justify-center">
