@@ -224,10 +224,11 @@ useEffect(() => {
 
         </div>
         <div className="hidden"></div>
-        <div className="mt-4 flex flex-col sm:flex-row justify-center items-center gap-3 w-[90%] mx-auto md:hidden">
+        <div className="mt-4 flex flex-col gap-3 w-[95%] mx-auto px-4 md:hidden">
+
               {/* Free Credit Score */}
               <Link href="/credit-score">
-              <div className="flex items-center justify-between bg-primary text-white px-6 py-2 rounded-full shadow-md w-full sm:w-[300px] cursor-pointer transition">
+              <div className="flex items-center justify-between bg-primary text-white px-6 py-2 rounded-full shadow-md w-full cursor-pointer transition">
                 <div>
                   <p className="font-medium">Free Credit Score</p>
                   <div className="text-[10px]">Get Your Free Credit Score Here!</div>
@@ -243,7 +244,7 @@ useEffect(() => {
 
               {/* Check Eligibility */}
               <Link href="/eligibility-check">
-              <div className="flex items-center justify-between bg-primary text-white px-6 py-2 rounded-full shadow-md w-full sm:w-[300px] cursor-pointer transition">
+              <div className="flex items-center justify-between bg-primary text-white px-6 py-2 rounded-full shadow-md w-full cursor-pointer transition">
                 <div>
                   <p className="font-medium">Check Eligibility</p>
                   <div className="text-[10px]">Get Your Loan Eligibility Now!</div>
