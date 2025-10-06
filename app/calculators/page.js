@@ -151,7 +151,7 @@ const Calculators = () => {
                       <h3 className="text-2xl font-bold text-primary mb-2">
                         Eligible Loan Amount
                       </h3>
-                      <p className="text-4xl font-bold text-accent">
+                      <p className="text-4xl font-bold text-primary">
                         ₹{result.toLocaleString()}
                       </p>
                       <p className="text-muted-foreground mt-4">

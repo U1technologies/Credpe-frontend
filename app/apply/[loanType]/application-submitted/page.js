@@ -132,7 +132,9 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/app/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/app/components/ui/card";
-import { CheckCircle, FileText, ArrowLeft } from "lucide-react";
+import { FileText, ArrowLeft } from "lucide-react";
+import Lottie from "lottie-react";
+import successAnimation from "@/public/assets/animations/success confetti.json";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 
@@ -166,12 +168,21 @@ export default function ApplicationSubmitted() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="pt-20">
+      <main className="">
         <div className="container mx-auto px-4 py-12">
-          <div className="max-w-2xl mx-auto">
-            <Card className="gradient-card border-0 shadow-elegant text-center">
-              <CardHeader className="pb-4">
-                <div className="flex justify-center mb-4"><CheckCircle className="h-16 w-16 text-accent" /></div>
+          <div className="max-w-3xl mx-auto">
+            <div className="border border-primary rounded-xl shadow-elegant text-center">
+              <CardHeader className="">
+                <div className="flex justify-center -my-7">
+                  {/* <CheckCircle className="h-16 w-16 text-accent" /> */}
+<Lottie 
+  animationData={successAnimation} 
+  loop={3}  
+  className="h-40 w-40" 
+/>
+
+
+                  </div>
                 <CardTitle className="text-3xl text-foreground mb-2">Application Submitted Successfully!</CardTitle>
                 <p className="text-muted-foreground">Thank you {applicationData.fullName} for applying with CredPe</p>
               </CardHeader>
@@ -183,7 +194,7 @@ export default function ApplicationSubmitted() {
                     <div className="flex justify-between"><span className="text-muted-foreground">Loan Type:</span><span className="font-semibold">{applicationData.loanType}</span></div>
                   </div>
                 </div>
-                <div className="bg-accent/20 rounded-lg p-6">
+                <div className="bg-primary/20 rounded-lg p-6">
                   <h3 className="text-lg font-semibold mb-2 text-foreground">What&apos;s Next?</h3>
                   <p className="text-muted-foreground text-sm">Our loan expert will reach out to you within 24 hours to discuss your application and guide you through the next steps. Please keep your documents ready.</p>
                 </div>
@@ -193,7 +204,7 @@ export default function ApplicationSubmitted() {
                 </div>
                 <div className="pt-4 text-xs text-muted-foreground">Need help? Contact us at <span className="text-primary">support@credpe.in</span> or call <span className="text-primary">1800-123-4567</span></div>
               </CardContent>
-            </Card>
+            </div>
           </div>
         </div>
       </main>

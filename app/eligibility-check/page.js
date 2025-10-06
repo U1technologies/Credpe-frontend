@@ -8,6 +8,10 @@ import { Button } from "../components/ui/button";
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { Doughnut } from "react-chartjs-2";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+ChartJS.register(ArcElement, Tooltip, Legend);
+
 
 // Loan Types with config (rate, tenure, and ranges)
 const loanTypes = [
@@ -270,20 +274,51 @@ const EligibilityCalculator = () => {
         </Card>
 
         {/* Right Result */}
-        <Card className="flex flex-col items-center justify-center p-10 text-center space-y-6">
-          <h3 className="text-xl font-semibold">Final Loan Amount Eligible</h3>
-          <div className="text-3xl font-bold text-primary">
-            {formatCurrency(calculateEligibility())}
-          </div>
-          <Link href={loanTypes.find((l) => l.name === loanType)?.href || "/apply"}>
-            <Button
-              size="lg"
-              className="bg-accent hover:bg-accent/80 text-white px-6 py-3 rounded-lg shadow-md"
-            >
-              Apply Now
-            </Button>
-          </Link>
-        </Card>
+{/* Right Result */}
+<Card className="flex flex-col items-center justify-center text-center space-y-6 relative">
+  <h3 className="text-xl font-semibold mb-4">Your Loan Eligibility</h3>
+
+  <div className="relative w-60 h-60 flex items-center justify-center">
+    <Doughnut
+      data={{
+        labels: ["Eligible", "Remaining"],
+        datasets: [
+          {
+            data: [
+              calculateEligibility(),
+              Math.max(0, 10000000 - calculateEligibility()),
+            ],
+            backgroundColor: ["#0e499c", "#E5E7EB"],
+            borderWidth: 0,
+          },
+        ],
+      }}
+      options={{
+        cutout: "75%",
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { enabled: false },
+        },
+      }}
+    />
+
+    {/* ✅ Center value */}
+    <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
+      <div className="text-2xl font-bold text-primary">
+        ₹{(calculateEligibility() / 100000).toFixed(2)}L
+      </div>
+    </div>
+  </div>
+
+  <Link href={loanTypes.find((l) => l.name === loanType)?.href || "/apply"}>
+    <Button className="bg-accent hover:bg-accent/80 text-white px-6 rounded-lg shadow-md">
+      Apply Now
+    </Button>
+  </Link>
+</Card>
+
+
       </div>
     </section>
     <Footer />

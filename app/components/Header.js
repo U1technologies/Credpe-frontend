@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
+import mainLogo from '../../public/assets/main-logo.svg'
+import Image from "next/image";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -34,9 +36,15 @@ const Header = () => {
       <div className="w-[90%] mx-auto">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold text-primary">CREDPE</span>
-          </Link>
+         <Link href="/" className="flex items-center space-x-2">
+    <Image
+      src={mainLogo}
+      alt="CREDPE Logo"
+      width={130} 
+      height={80} 
+      priority
+    />
+  </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -88,9 +96,14 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" size="sm">
-              Check Eligibility
-            </Button>
+            <Button
+  variant="outline"
+  size="sm"
+  className="!border-1.5px !border-[color:var(--primary)] "
+>
+  Check Eligibility
+</Button>
+
            <Link
                   href={"/apply/personal"}
                 >

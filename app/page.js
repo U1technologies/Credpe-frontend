@@ -13,7 +13,6 @@ export default function Home() {
       <main>
         <Hero />
         <LoanCategories />
-      
         <EMICalculator />
           <Benefits />
         <Testimonials />
