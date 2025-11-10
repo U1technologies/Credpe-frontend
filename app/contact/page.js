@@ -221,15 +221,16 @@ export default function Contact() {
                       <CardContent className="pt-3">
                         <div className="flex items-start gap-4">
                           <info.icon className="h-4 w-4 text-primary mt-2" />
-                          <div>
-                            <h4 className="font-semibold mb-1">{info.title}</h4>
-                            <p className="text-muted-foreground text-sm mb-1">
-                              {info.content}
-                            </p>
-                            <p className="text-xs text-muted-foreground">
-                              {info.description}
-                            </p>
-                          </div>
+                         <div>
+  <h4 className="font-semibold mb-1">{info.title}</h4>
+  <span className="block text-sm text-muted-foreground mb-1">
+    {info.content}
+  </span>
+  <span className="block text-sm text-muted-foreground">
+    {info.description}
+  </span>
+</div>
+
                         </div>
                       </CardContent>
                     </Card>
@@ -239,10 +240,10 @@ export default function Contact() {
 
 <Card className="bg-primary/5">
   <CardHeader>
-    <CardTitle className="flex items-center gap-2">
+    <div className="flex items-center gap-2">
       <MessageCircle className="h-4 w-4" />
-      <span className="font-semibold">Need Immediate Help?</span>
-    </CardTitle>
+      <h4 className="font-semibold">Need Immediate Help?</h4>
+    </div>
   </CardHeader>
   <CardContent>
     <p className="text-muted-foreground mb-4">

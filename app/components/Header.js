@@ -39,7 +39,7 @@ const Header = () => {
          <Link href="/" className="flex items-center space-x-2">
     <Image
       src={mainLogo}
-      alt="CREDPE Logo"
+      alt="Credpe – AI-Powered Smart Finance Platform for Loans & Credit Cards"
       width={130} 
       height={80} 
       priority
