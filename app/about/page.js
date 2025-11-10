@@ -11,8 +11,8 @@ import underline from '../../public/assets/under-1.svg'
 
 const About = () => {
   const stats = [
-    { icon: Users, value: "5 Lakh+", label: "Happy Customers" },
-    { icon: TrendingUp, value: "₹10,000 Cr+", label: "Loans Disbursed" },
+    { icon: Users, value: "1 Lakh+", label: "Happy Customers" },
+    { icon: TrendingUp, value: "₹1,000 Cr+", label: "Loans Disbursed" },
     { icon: Award, value: "99.2%", label: "Approval Rate" },
     { icon: Clock, value: "2 Hours", label: "Fastest Approval" },
   ];
@@ -104,7 +104,7 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-      <section className="pt-12 relative bg-muted/20">
+      <section className="pt-12 relative bg-muted/20 pb-12">
         <div className="container mx-auto px-4 text-center mb-12">
           <div className="inline-block">
     <h3 className="font-bold text-gray-800">
@@ -139,7 +139,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team */}
+      {/* Team 
       <section className="py-12 relative">
         <div className="container mx-auto px-4 text-center mb-12">
                 <div className="inline-block">
@@ -178,7 +178,7 @@ const About = () => {
             </Card>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Milestones / Journey */}
       {/* <section className="pt-12 bg-muted/10 relative">
