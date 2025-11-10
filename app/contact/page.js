@@ -43,7 +43,7 @@ export default function Contact() {
     {
       icon: Phone,
       title: "Phone Support",
-      content: "+91 9876543210",
+      content: "+91 82929 43921",
       description: "Call us for immediate assistance",
     },
     {
@@ -56,54 +56,44 @@ export default function Contact() {
       icon: MapPin,
       title: "Head Office",
       content:
-        "123 Business Center, Bandra Kurla Complex, Mumbai - 400051",
+        "B-11, Noida Sector-4, UP, 201301",
       description: "Visit our main office",
     },
     {
       icon: Clock,
       title: "Business Hours",
-      content: "Mon - Sat: 9:00 AM - 7:00 PM",
-      description: "Sunday: 10:00 AM - 4:00 PM",
+      content: "Mon - Sat: 10:00 AM - 7:00 PM",
     },
   ];
 
   const offices = [
     {
-      city: "Mumbai",
-      address: "123 Business Center, BKC, Mumbai - 400051",
-      phone: "+91 22 4567 8901",
+      city: "Noida, Uttar Pradesh",
+      address: "B-11, Noida Sector-4, UP, 201301",
+      phone: "+91 82929 43921",
     },
     {
-      city: "Delhi",
-      address: "456 Corporate Tower, Connaught Place, Delhi - 110001",
-      phone: "+91 11 4567 8902",
-    },
-    {
-      city: "Bangalore",
-      address: "789 Tech Park, Electronic City, Bangalore - 560100",
-      phone: "+91 80 4567 8903",
-    },
-    {
-      city: "Pune",
-      address: "321 IT Hub, Hinjewadi, Pune - 411057",
-      phone: "+91 20 4567 8904",
+      city: "Siwan, Bihar",
+      address: "Hakma, Tarwara, Bihar, 841506",
+      phone: "+91 82929 43921",
     },
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
-
-      {/* Hero Section */}
-      <section className="py-16 bg-gradient-subtle">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Get in touch with our team. We&apos;re here to help you with all your
-            loan and financial needs.
-          </p>
-        </div>
-      </section>
+              <div className="w-full bg-primary h-[25vh] flex flex-col items-center justify-center text-center px-4">
+  <h2 className="max-md:hidden text-white font-bold">
+    Contact Us
+  </h2>
+    <span className="md:hidden text-[34px] text-white font-bold">
+    Contact Us
+  </span>
+  <p className="text-white mx-auto text-sm md:text-base">
+   Get in touch with our team. We&apos;re here to help you with all your loan and financial needs.
+  </p>
+</div>
+      {/* </section> */}
 
       {/* Contact Form & Info */}
       <section className="py-16">
@@ -120,7 +110,7 @@ export default function Contact() {
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="">
                     <div>
                       <Label htmlFor="name">Full Name *</Label>
                       <Input
@@ -133,7 +123,21 @@ export default function Contact() {
                         required
                       />
                     </div>
-                    <div>
+                    {/* <div>
+                      <Label htmlFor="phone">Phone Number *</Label>
+                      <Input
+                        id="phone"
+                        type="tel"
+                        placeholder="Enter phone number"
+                        value={formData.phone}
+                        onChange={(e) =>
+                          setFormData({ ...formData, phone: e.target.value })
+                        }
+                        required
+                      />
+                    </div> */}
+                  </div>
+                  <div>
                       <Label htmlFor="phone">Phone Number *</Label>
                       <Input
                         id="phone"
@@ -146,7 +150,6 @@ export default function Contact() {
                         required
                       />
                     </div>
-                  </div>
 
                   <div>
                     <Label htmlFor="email">Email Address *</Label>
@@ -211,15 +214,15 @@ export default function Contact() {
             {/* Contact Info + Quick Actions */}
             <div className="space-y-6">
               <div>
-                <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
+                {/* <h3 className="font-bold mb-6">Get in Touch</h3> */}
                 <div className="space-y-4">
                   {contactInfo.map((info, index) => (
                     <Card key={index}>
-                      <CardContent className="pt-6">
+                      <CardContent className="pt-3">
                         <div className="flex items-start gap-4">
-                          <info.icon className="h-6 w-6 text-primary mt-1" />
+                          <info.icon className="h-4 w-4 text-primary mt-2" />
                           <div>
-                            <h3 className="font-semibold mb-1">{info.title}</h3>
+                            <h4 className="font-semibold mb-1">{info.title}</h4>
                             <p className="text-muted-foreground text-sm mb-1">
                               {info.content}
                             </p>
@@ -234,71 +237,85 @@ export default function Contact() {
                 </div>
               </div>
 
-              <Card className="bg-primary/5">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <MessageCircle className="h-5 w-5" />
-                    Need Immediate Help?
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4">
-                    For urgent loan queries or application support, reach out to
-                    us directly:
-                  </p>
-                  <div className="space-y-2">
-                    <Button variant="outline" className="w-full justify-start">
-                      <Phone className="h-4 w-4 mr-2" />
-                      Call +91 9876543210
-                    </Button>
-                    <Button variant="outline" className="w-full justify-start">
-                      <MessageCircle className="h-4 w-4 mr-2" />
-                      WhatsApp Support
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
+<Card className="bg-primary/5">
+  <CardHeader>
+    <CardTitle className="flex items-center gap-2">
+      <MessageCircle className="h-4 w-4" />
+      <span className="font-semibold">Need Immediate Help?</span>
+    </CardTitle>
+  </CardHeader>
+  <CardContent>
+    <p className="text-muted-foreground mb-4">
+      For urgent queries or application support, reach out to us directly:
+    </p>
+    <div className="space-y-2">
+      <Button
+        variant="outline"
+        className="w-full justify-start"
+        onClick={() => window.open("tel:+918292943921")}
+      >
+        <Phone className="h-4 w-4 mr-2" />
+        Call +91 82929 43921
+      </Button>
+
+      <Button
+        variant="outline"
+        className="w-full justify-start"
+        onClick={() =>
+          window.open(
+            "https://wa.me/918292943921?text=Hi%20Credpe%20Team%2C%20I%27m%20interested%20in%20learning%20more%20about%20your%20financial%20services."
+          )
+        }
+      >
+        <MessageCircle className="h-4 w-4 mr-2" />
+        WhatsApp Support
+      </Button>
+    </div>
+  </CardContent>
+</Card>
+
+
             </div>
           </div>
         </div>
       </section>
 
       {/* Office Locations */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Our Offices</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Visit us at any of our office locations across major cities in
-              India
-            </p>
-          </div>
+<section className="pt-2 pb-14">
+  <div className="container mx-auto px-4 flex flex-col items-center">
+    <div className="text-center mb-10">
+      <h2 className="font-semibold mb-2">Our Offices</h2>
+      <p className="text-muted-foreground mx-auto">
+        Visit us at any of our office locations.
+      </p>
+    </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {offices.map((office, index) => (
-              <Card key={index}>
-                <CardHeader>
-                  <CardTitle className="text-lg">{office.city}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-3">
-                    <div className="flex items-start gap-2">
-                      <MapPin className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
-                      <p className="text-sm text-muted-foreground">
-                        {office.address}
-                      </p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Phone className="h-4 w-4 text-primary" />
-                      <p className="text-sm font-medium">{office.phone}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+    <div className="flex flex-wrap justify-center gap-8 w-[80%]">
+      {offices.map((office, index) => (
+        <div
+          key={index}
+          className="flex-1 min-w-[280px] bg-white rounded-xl border-primary border shadow-md p-6"
+        >
+          <h3 className="text-center text-lg font-semibold text-primary mb-4">
+            {office.city}
+          </h3>
+          <div className="space-y-3">
+            <div className="flex items-start gap-2">
+              <MapPin className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+              <p className="text-sm text-muted-foreground">{office.address}</p>
+            </div>
+            <div className="flex items-center gap-2">
+              <Phone className="h-4 w-4 text-primary" />
+              <p className="text-sm font-medium">{office.phone}</p>
+            </div>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
+
 
       <Footer />
     </div>
