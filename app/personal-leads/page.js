@@ -3,10 +3,14 @@
 import React, { useState } from 'react';
 import Header from '../components/Header';
 import LoanCalculator from '../components/LoanCalculator';
-import OTPVerification from '../components/OtpVerification';
 import PersonalDetailsForm from '../components/PersonalDetails';
 import ThankYou from '../components/ThankYou';
 import DocumentsModal from '../components/DocumentsModal';
+import BankingPartners from "../components/BankingPartners";
+import Testimonials from '../components/LandingPageTestimonial';
+import FAQPersonalLoan from '../components/FAQPersonalLoan';
+import PersonalLoanCTA from '../components/PersonalLoanCTA';
+import TopPersonalLoanBanner from '../components/TopPersonalLoanBanner';
 
 const Index = () => {
   const [currentStep, setCurrentStep] = useState('calculator');
@@ -16,16 +20,11 @@ const Index = () => {
 
   const handleApplyNow = (mobile) => {
     setMobileNumber(mobile);
-    setCurrentStep('otp');
-  };
-
-  const handleOTPVerificationSuccess = () => {
     setCurrentStep('form');
   };
 
-  const handleFormSubmit = (data) => {
-    const appId = `CREDPE${Date.now().toString().slice(-8)}`;
-    setApplicationId(appId);
+  const handleFormSubmit = (applicationId) => {
+    setApplicationId(applicationId); 
     setCurrentStep('thank-you');
   };
 
@@ -33,49 +32,41 @@ const Index = () => {
     setShowDocuments(true);
   };
 
-  const handleExploreLoanOptions = () => {
-    setCurrentStep('calculator');
-  };
-
   const handleBackToCalculator = () => {
     setCurrentStep('calculator');
   };
 
-  const handleBackToOTP = () => {
-    setCurrentStep('otp');
-  };
-
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      {/* <Header /> */}
+      <TopPersonalLoanBanner />
       
-      {currentStep === 'calculator' && (
-        <LoanCalculator onApplyNow={handleApplyNow} />
-      )}
-      
-      {currentStep === 'otp' && (
-        <OTPVerification
-          mobileNumber={mobileNumber}
-          onVerificationSuccess={handleOTPVerificationSuccess}
+     {currentStep === 'calculator' && (
+  <>
+    <div id="loan-calculator-section">
+  <LoanCalculator onApplyNow={handleApplyNow} />
+</div>
+
+  </>
+)}    
+      {currentStep === 'form' && (
+        <PersonalDetailsForm
+          onSubmit={handleFormSubmit} 
           onBack={handleBackToCalculator}
         />
       )}
-      
-      {currentStep === 'form' && (
-        <PersonalDetailsForm
-          onSubmit={handleFormSubmit}
-          onBack={handleBackToOTP}
-        />
-      )}
-      
+
       {currentStep === 'thank-you' && (
         <ThankYou
           applicationId={applicationId}
           onViewDocuments={handleViewDocuments}
-          onExploreLoanOptions={handleExploreLoanOptions}
+          onBackToForm={() => setCurrentStep('form')} 
         />
       )}
-      
+          <BankingPartners /> 
+    <Testimonials />
+     <FAQPersonalLoan />
+     <PersonalLoanCTA />
       <DocumentsModal
         isOpen={showDocuments}
         onClose={() => setShowDocuments(false)}
