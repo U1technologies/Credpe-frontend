@@ -3,19 +3,12 @@
 import React from 'react';
 import { Card, CardContent } from './ui/card';
 import { Button } from './ui/button';
-import { CheckCircle, FileText, ArrowRight, Check } from 'lucide-react';
-// import { useNavigate } from 'react-router-dom';
+import { CheckCircle, FileText, ArrowLeft } from 'lucide-react';
 
-const ThankYou = ({ applicationId, onViewDocuments, onExploreLoanOptions }) => {
-//   const navigate = useNavigate();
-
-  const handleExploreLoanOptions = () => {
-    // navigate('/loan-options');
-  };
-
+const ThankYou = ({ applicationId, onViewDocuments, onBackToForm }) => {
   return (
-    <div className="min-h-screen bg-background py-8 px-4">
-      <div className="max-w-3xl mx-auto">
+    <div className="bg-background pt-10 pb-8">
+      <div className="max-md:w-[90%] w-[75%] mx-auto">
         <Card className="text-center">
           <CardContent className="py-6 px-8">
             <div className="space-y-4">
@@ -43,79 +36,51 @@ const ThankYou = ({ applicationId, onViewDocuments, onExploreLoanOptions }) => {
               </div>
 
               {/* Next Steps */}
-<div className="text-left bg-card border rounded-lg p-4 space-y-4">
-  <h4 className="font-semibold text-foreground">Next Steps:</h4>
-  <div className="space-y-3">
-    <div className="flex items-start gap-3">
-      <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2.5"></div>
-      <div>
-        <p className="font-medium text-foreground">Document Verification</p>
-        <p className="text-sm text-muted-foreground">Our team will review your application and may request additional documents.</p>
-      </div>
-    </div>
-    
-    <div className="flex items-start gap-3">
-      <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2.5"></div>
-      <div>
-        <p className="font-medium text-foreground">NBFC Partner Matching</p>
-        <p className="text-sm text-muted-foreground">
-  We&apos;ll match you with the best NBFC partners based on your profile.
-</p>
+              <div className="text-left bg-card border rounded-lg p-4 space-y-4">
+                <h4 className="font-semibold text-foreground">Next Steps:</h4>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2.5"></div>
+                    <div>
+                      <p className="font-medium text-foreground">Document Verification</p>
+                      <p className="text-sm text-muted-foreground">Our team will review your application and may request additional documents.</p>
+                    </div>
+                  </div>
 
-      </div>
-    </div>
-    
-    <div className="flex items-start gap-3">
-      <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2.5"></div>
-      <div>
-        <p className="font-medium text-foreground">Loan Approval & Disbursement</p>
-        <p className="text-sm text-muted-foreground">Once approved, the loan amount will be disbursed to your account within 24-48 hours.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-              {/* Contact Information */}
-              <div className="border border-accent p-4 rounded-lg text-left">
-                <h4 className="font-semibold text-foreground mb-1">Need Help?</h4>
-                <p className="text-sm text-muted-foreground">
-                  Our customer support team is available 24/7 to assist you.
-                </p>
-                <div className="mt-1 space-y-1">
-                  <p className="text-sm">
-                    <span className="font-medium">Email:</span> support@credpe.com
-                  </p>
-                  <p className="text-sm">
-                    <span className="font-medium">Phone:</span> 1800-XXX-XXXX
-                  </p>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2.5"></div>
+                    <div>
+                      <p className="font-medium text-foreground">Loan Approval & Disbursement</p>
+                      <p className="text-sm text-muted-foreground">Once approved, loan will be disbursed within 24-48 hrs.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              {/* Action Buttons */}
+              {/* Buttons (Updated) */}
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <Button
-                  onClick={onViewDocuments}
+                  onClick={onBackToForm}
                   variant="outline"
+                  className="flex-1"
+                >
+                  <ArrowLeft className="w-5 h-5 mr-2" />
+                  Back
+                </Button>
+
+                <Button
+                  onClick={onViewDocuments}
                   className="flex-1"
                 >
                   <FileText className="w-5 h-5 mr-2" />
                   View Required Documents
-                </Button>
-                
-                <Button
-                  onClick={handleExploreLoanOptions}
-                  className="flex-1"
-                >
-                  Explore Other Loan Options
-                  <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </div>
 
               {/* Footer Note */}
               <div className="text-xs text-muted-foreground pt-4 border-t">
                 <p>
-                  You will receive SMS and email updates about your application status.
-                  Please keep your phone accessible for any verification calls.
+                  You will receive SMS/email updates about your application status. Please keep your phone accessible.
                 </p>
               </div>
             </div>
