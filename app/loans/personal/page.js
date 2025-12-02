@@ -1,3 +1,32 @@
+export const metadata = {
+  title: "Personal Loan – Instant Approval, Low Interest Rates & Flexible EMI | CredPe",
+  description:
+    "Compare the best Personal Loans in India with low interest rates and fast approval. Check eligibility, required documents, loan types, EMI, and apply online instantly with CredPe.",
+  keywords: [
+    "personal loan",
+    "instant personal loan",
+    "personal loan online",
+    "low interest personal loan",
+    "personal loan eligibility",
+    "personal loan EMI",
+    "apply personal loan",
+    "personal loan documents",
+    "personal loan approval",
+    "best personal loan banks"
+  ],
+  openGraph: {
+    title: "Personal Loan – Compare Rates & Apply Online Instantly | CredPe",
+    description:
+      "Get instant personal loans for any purpose—wedding, travel, medical, debt consolidation, or emergency needs. Compare interest rates, EMI options, and apply online with CredPe.",
+    url: "https://credpe.in/loans/personal",
+    siteName: "CredPe",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://credpe.in/loans/personal",
+  },
+};
+
 "use client";
 
 import { useState, useEffect } from "react";

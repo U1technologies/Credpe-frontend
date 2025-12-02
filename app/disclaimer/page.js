@@ -1,3 +1,15 @@
+export const metadata = {
+  title: "CredPe Disclaimer – Loan Aggregator & Information Notice",
+  description:
+    "Read CredPe’s official disclaimer about our role as a loan aggregator. Learn about liability, third-party lenders, fraud prevention, communication consent, and user responsibility.",
+  keywords: [
+    "CredPe disclaimer",
+    "loan aggregator disclaimer",
+    "financial disclaimer India",
+    "CredPe legal information",
+  ],
+};
+
 "use client";
 
 import React from "react";

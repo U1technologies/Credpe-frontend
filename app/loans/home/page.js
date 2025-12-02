@@ -1,3 +1,33 @@
+export const metadata = {
+  title: "Home Loan – Compare Interest Rates, Eligibility & Apply Online | CredPe",
+  description:
+    "Get the best Home Loan offers from top banks & NBFCs. Compare interest rates, check eligibility, required documents, loan types, and calculate EMI before applying online through CredPe.",
+  keywords: [
+    "home loan",
+    "housing loan",
+    "home loan interest rate",
+    "apply home loan online",
+    "best home loan banks",
+    "home loan eligibility",
+    "home loan documents required",
+    "home loan EMI calculator",
+    "housing finance",
+    "low interest home loan"
+  ],
+  openGraph: {
+    title: "Home Loan – Best Interest Rates & Instant Online Application | CredPe",
+    description:
+      "Compare home loan interest rates, eligibility criteria, processing fees, and calculate EMI instantly. Apply online for a housing loan with CredPe.",
+    url: "https://credpe.in/loans/home",
+    siteName: "CredPe",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://credpe.in/loans/home",
+  },
+};
+
+
 "use client";
 
 import { useState, useEffect } from "react";

@@ -1,3 +1,17 @@
+export const metadata = {
+  title: "Loan Calculators – EMI, Eligibility & Comparison Tools | CredPe",
+  description:
+    "Use CredPe’s EMI calculator, loan eligibility calculator, and comparison tools to plan your finances and find the best loan options.",
+  keywords: [
+    "loan calculator",
+    "emi calculator",
+    "loan eligibility calculator",
+    "loan comparison",
+    "CredPe calculator"
+  ],
+};
+
+
 "use client";
 
 import { useState } from "react";

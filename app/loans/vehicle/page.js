@@ -1,3 +1,34 @@
+export const metadata = {
+  title: "Vehicle Loan – Car, Bike & EV Loan at Best Interest Rates | CredPe",
+  description:
+    "Apply for a Vehicle Loan with flexible EMIs and competitive interest rates. Compare car, bike, EV, and commercial vehicle loan offers from top banks & NBFCs. Check eligibility, documents, and calculate EMI on CredPe.",
+  keywords: [
+    "vehicle loan",
+    "car loan",
+    "bike loan",
+    "electric vehicle loan",
+    "EV loan",
+    "used car loan",
+    "commercial vehicle loan",
+    "vehicle loan interest rate",
+    "vehicle loan eligibility",
+    "vehicle loan documents",
+    "new car loan",
+    "two wheeler loan"
+  ],
+  openGraph: {
+    title: "Vehicle Loan – Compare Car, Bike & EV Loan Offers | CredPe",
+    description:
+      "Get the best vehicle loan offers for cars, bikes, EVs, and commercial vehicles. Compare interest rates, eligibility criteria, and documents required. Apply online with CredPe.",
+    url: "https://credpe.in/loans/vehicle",
+    siteName: "CredPe",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://credpe.in/loans/vehicle",
+  },
+};
+
 "use client";
 
 import { useState, useEffect } from "react";

@@ -1,4 +1,34 @@
 
+export function generateMetadata({ params }) {
+  const loanType = params.loanType;
+
+  const loanTitles = {
+    personal: "Personal Loan",
+    business: "Business Loan",
+    education: "Education Loan",
+    home: "Home Loan",
+    vehicle: "Vehicle Loan",
+    medical: "Medical Loan",
+    gold: "Gold Loan",
+    property: "Loan Against Property",
+    "transfer-home": "Transfer Home Loan",
+    car: "Loan Against Car",
+  };
+
+  const titleText = loanTitles[loanType] || "Loan Application";
+
+  return {
+    title: `${titleText} – Apply Online | CredPe`,
+    description: `Apply for ${titleText} with CredPe. Secure loan process, instant OTP verification, and fast approval.`,
+    keywords: [
+      `${titleText} apply`,
+      `${titleText} online`,
+      "loan application",
+      "CredPe loans",
+      "OTP loan verification",
+    ],
+  };
+}
 
 "use client";
 

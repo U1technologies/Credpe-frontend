@@ -1,3 +1,32 @@
+export const metadata = {
+  title: "Medical Loan – Instant Medical Emergency Loans | Compare Rates & Apply Online | CredPe",
+  description:
+    "Get instant Medical Loans for emergency treatments, surgeries, hospitalization, and healthcare expenses. Compare interest rates, check eligibility, required documents, and apply online with CredPe.",
+  keywords: [
+    "medical loan",
+    "medical emergency loan",
+    "instant medical loan",
+    "loan for surgery",
+    "medical treatment loan",
+    "hospitalization loan",
+    "medical loan eligibility",
+    "medical loan interest rate",
+    "apply medical loan online",
+    "healthcare loan"
+  ],
+  openGraph: {
+    title: "Medical Loan – Fast Approval for Emergency Medical Expenses | CredPe",
+    description:
+      "Compare medical loan interest rates, eligibility, documents, and get instant approval for emergency healthcare expenses. Apply online through CredPe.",
+    url: "https://credpe.in/loans/medical",
+    siteName: "CredPe",
+    type: "website"
+  },
+  alternates: {
+    canonical: "https://credpe.in/loans/medical",
+  },
+};
+
 "use client";
 
 import { useState, useEffect } from "react";

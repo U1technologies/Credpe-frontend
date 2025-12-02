@@ -1,3 +1,32 @@
+export const metadata = {
+  title: "Gold Loan – Compare Per Gram Rates, Interest & Apply Online | CredPe",
+  description:
+    "Get instant Gold Loan from top banks & NBFCs at the best per-gram rates. Compare interest rates, check eligibility, required documents, LTV limits, repayment options, and apply online through CredPe.",
+  keywords: [
+    "gold loan",
+    "gold loan interest rate",
+    "gold loan per gram rate",
+    "instant gold loan",
+    "gold loan online apply",
+    "best gold loan banks",
+    "gold loan eligibility",
+    "documents for gold loan",
+    "gold loan LTV",
+    "NBFC gold loan rates"
+  ],
+  openGraph: {
+    title: "Gold Loan – Best Per Gram Rates & Instant Approval | CredPe",
+    description:
+      "Compare gold loan offers from leading banks & NBFCs. Check interest rates, LTV limits, eligibility criteria, documents required, and apply instantly.",
+    url: "https://credpe.in/loans/gold",
+    siteName: "CredPe",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://credpe.in/loans/gold",
+  },
+};
+
 "use client";
 
 import { useState, useEffect } from "react";

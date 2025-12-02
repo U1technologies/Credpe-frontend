@@ -1,3 +1,32 @@
+export const metadata = {
+  title: "Loan Against Car – Get Instant Funds Using Your Car | Compare Interest Rates | CredPe",
+  description:
+    "Apply for a Loan Against Car and unlock instant funds using your vehicle as collateral. Compare top banks & NBFCs, check eligibility, required documents, interest rates, and calculate EMI online with CredPe.",
+  keywords: [
+    "loan against car",
+    "car mortgage loan",
+    "loan against vehicle",
+    "car pledged loan",
+    "use car as collateral",
+    "loan against used car",
+    "vehicle loan eligibility",
+    "car loan interest rate",
+    "apply loan against car"
+  ],
+  openGraph: {
+    title: "Loan Against Car – Compare & Apply Online | CredPe",
+    description:
+      "Get instant funds by using your car as security. Compare lenders, interest rates, documents required, and apply for a Loan Against Car with CredPe.",
+    url: "https://credpe.in/loans/car",
+    siteName: "CredPe",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://credpe.in/loans/car",
+  },
+};
+
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -491,7 +520,7 @@ const ApplicationProcess = ({ steps }) => (
   </section>
 );
 
-export default function VehicleLoan() {
+export default function CarLoan() {
   // const { toast } = useToast();
   const [activeSection, setActiveSection] = useState("highlights");
   const [formData, setFormData] = useState({

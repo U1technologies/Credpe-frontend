@@ -1,3 +1,27 @@
+export const metadata = {
+  title: "Terms of Use | CredPe",
+  description:
+    "Review the CredPe Terms of Use governing your access and use of our website, mobile application, and loan comparison services.",
+  keywords: [
+    "CredPe terms of use",
+    "user agreement",
+    "website terms",
+    "loan service terms",
+    "financial service terms and conditions"
+  ],
+  openGraph: {
+    title: "Terms of Use | CredPe",
+    description:
+      "Understand the rules, obligations, and conditions for using the CredPe platform and financial services.",
+    url: "https://credpe.in/terms",
+    siteName: "CredPe",
+    type: "article",
+  },
+  alternates: {
+    canonical: "https://credpe.in/terms",
+  },
+};
+
 "use client";
 
 import React from "react";

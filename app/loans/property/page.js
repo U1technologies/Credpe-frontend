@@ -1,3 +1,32 @@
+export const metadata = {
+  title: "Loan Against Property (LAP) – High Loan Amounts, Low Interest Rates | CredPe",
+  description:
+    "Get a Loan Against Property (LAP) with low interest rates and long tenures. Compare top banks/NBFCs, check eligibility, required documents, property criteria, and apply online through CredPe.",
+  keywords: [
+    "loan against property",
+    "LAP loan",
+    "mortgage loan",
+    "loan against residential property",
+    "loan against commercial property",
+    "property loan",
+    "LAP interest rate",
+    "secured loan against property",
+    "loan against property eligibility",
+    "loan against property documents"
+  ],
+  openGraph: {
+    title: "Loan Against Property – Compare Interest Rates & Apply Online | CredPe",
+    description:
+      "Unlock funds using your residential or commercial property. Compare LAP interest rates, eligibility, documents, and apply online instantly with CredPe.",
+    url: "https://credpe.in/loans/property",
+    siteName: "CredPe",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://credpe.in/loans/property",
+  },
+};
+
 "use client";
 
 import { useState, useEffect } from "react";

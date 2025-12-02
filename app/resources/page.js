@@ -1,3 +1,29 @@
+export const metadata = {
+  title: "Financial Resources, Loan Guides, FAQs & Articles | CredPe",
+  description:
+    "Explore expert financial articles, credit score tips, loan guides, FAQs, and customer success stories. Stay informed and make smarter financial decisions with CredPe.",
+  keywords: [
+    "financial resources",
+    "loan guides",
+    "credit score tips",
+    "personal finance articles",
+    "loan FAQs",
+    "CredPe blog",
+    "financial education"
+  ],
+  openGraph: {
+    title: "Financial Resources & Loan Knowledge Hub | CredPe",
+    description:
+      "Access loan guides, FAQs, financial articles, and success stories to understand loans and make informed financial decisions.",
+    url: "https://credpe.in/resources",
+    siteName: "CredPe",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://credpe.in/resources",
+  },
+};
+
 "use client";
 
 import Header from "../components/Header";

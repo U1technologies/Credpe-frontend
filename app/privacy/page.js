@@ -1,3 +1,29 @@
+export const metadata = {
+  title: "Privacy Policy | CredPe",
+  description:
+    "Read the CredPe Privacy Policy to understand how we collect, use, store, and protect your personal data while offering loan comparison and financial services.",
+  keywords: [
+    "CredPe privacy policy",
+    "data protection",
+    "personal data usage",
+    "loan application privacy",
+    "financial data safety",
+    "how CredPe uses your information"
+  ],
+  openGraph: {
+    title: "Privacy Policy | CredPe",
+    description:
+      "Learn how CredPe protects your personal data and ensures secure processing across all digital financial services.",
+    url: "https://credpe.in/privacy",
+    siteName: "CredPe",
+    type: "article",
+  },
+  alternates: {
+    canonical: "https://credpe.in/privacy",
+  },
+};
+
+
 "use client";
 
 import React from "react";
