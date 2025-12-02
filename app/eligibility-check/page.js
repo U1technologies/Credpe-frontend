@@ -1,3 +1,4 @@
+
 "use client";
 import { useState, useEffect } from "react";
 import { Card } from "../components/ui/card";
@@ -12,8 +13,6 @@ import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-
-// Loan Types with config (rate, tenure, and ranges)
 const loanTypes = [
   { name: "Personal Loan", href: "/apply/personal", rate: 12, tenure: 60 },
   { name: "Business Loan", href: "/apply/business", rate: 14, tenure: 72 },
@@ -27,7 +26,6 @@ const loanTypes = [
   { name: "Loan Against Car", href: "/apply/car", rate: 12, tenure: 60 },
 ];
 
-// 🔹 Loan configs with ranges for sliders
 const loanConfigs = {
   "Personal Loan": {
     income: [10000, 2000000],
@@ -91,12 +89,11 @@ const loanConfigs = {
   },
 };
 
-// 🔹 Reusable Input + Slider (fixed alignment and input handling)
 const InputWithSlider = ({ label, min, max, step, value, setValue, prefix }) => {
   const [inputValue, setInputValue] = useState('');
   const [isFocused, setIsFocused] = useState(false);
 
-  // Update input value when slider value changes (only if not focused)
+
   useEffect(() => {
     if (!isFocused) {
       setInputValue(value[0].toString());
@@ -261,15 +258,6 @@ const EligibilityCalculator = () => {
             setValue={setEmi}
             prefix="₹"
           />
-          {/* <InputWithSlider
-            label="CIBIL Score"
-            min={config.cibil[0]}
-            max={config.cibil[1]}
-            step={10}
-            value={cibil}
-            setValue={setCibil}
-            prefix=""
-          /> */}
         
         </Card>
 

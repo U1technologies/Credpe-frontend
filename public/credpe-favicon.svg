@@ -1,0 +1,6 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <rect width="256" height="256" rx="48" fill="white"/>
+  <text x="50%" y="54%" font-family="Arial, sans-serif" font-weight="700" font-size="150" fill="#0047BB" text-anchor="middle" dominant-baseline="middle">
+    C<tspan fill="#FF8A3D">P</tspan>
+  </text>
+</svg>

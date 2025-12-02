@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -491,7 +492,7 @@ const ApplicationProcess = ({ steps }) => (
   </section>
 );
 
-export default function VehicleLoan() {
+export default function CarLoan() {
   // const { toast } = useToast();
   const [activeSection, setActiveSection] = useState("highlights");
   const [formData, setFormData] = useState({
