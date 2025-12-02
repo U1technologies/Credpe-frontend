@@ -1,16 +1,4 @@
 
-export const metadata = {
-  title: "Contact CredPe – Customer Support & Loan Assistance",
-  description:
-    "Get in touch with CredPe for loan inquiries, application support, eligibility help, EMI queries, or partnership opportunities. Call, email or visit our office.",
-  keywords: [
-    "CredPe contact",
-    "loan customer support",
-    "CredPe office",
-    "CredPe phone number",
-    "loan assistance India",
-  ],
-};
 
 "use client";
 

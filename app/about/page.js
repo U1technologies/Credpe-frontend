@@ -1,16 +1,3 @@
-export const metadata = {
-  title: "About CredPe – India’s Smart Loan Comparison & Eligibility Platform",
-  description:
-    "Learn about CredPe’s mission to simplify loans in India with transparent comparison, instant eligibility checks, and secure digital processes.",
-  keywords: [
-    "about CredPe",
-    "CredPe mission",
-    "loan platform India",
-    "digital lending India",
-    "loan comparison"
-  ],
-};
-
 
 "use client";
 

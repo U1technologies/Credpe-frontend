@@ -1,30 +1,3 @@
-export const metadata = {
-  title: "Business Loan – Apply Online, Compare Interest Rates & Check Eligibility | CredPe",
-  description:
-    "Apply for a Business Loan instantly through CredPe. Compare top banks & NBFCs, check interest rates, eligibility, loan types, documents required, and calculate EMI before applying.",
-  keywords: [
-    "business loan",
-    "MSME loan",
-    "small business loan",
-    "unsecured business loan",
-    "business loan eligibility",
-    "business loan interest rate",
-    "startup loan India",
-    "compare business loans",
-    "apply business loan online"
-  ],
-  openGraph: {
-    title: "Business Loan – Compare & Apply Online | CredPe",
-    description:
-      "Compare business loan interest rates, calculate EMI, check eligibility, and apply online with leading banks & NBFCs through CredPe.",
-    url: "https://credpe.in/loans/business",
-    siteName: "CredPe",
-    type: "website",
-  },
-  alternates: {
-    canonical: "https://credpe.in/loans/business",
-  },
-};
 
 "use client";
 

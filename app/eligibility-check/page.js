@@ -1,15 +1,3 @@
-export const metadata = {
-  title: "Loan Eligibility Calculator – Check Loan Amount You Qualify For | CredPe",
-  description:
-    "Calculate your loan eligibility instantly using income, expenses, credit score and EMI obligations. Works for personal, home, business, education and vehicle loans.",
-  keywords: [
-    "loan eligibility calculator",
-    "check loan eligibility",
-    "personal loan eligibility",
-    "home loan calculator",
-    "EMI eligibility",
-  ],
-};
 
 "use client";
 import { useState, useEffect } from "react";
@@ -104,6 +92,7 @@ const loanConfigs = {
 const InputWithSlider = ({ label, min, max, step, value, setValue, prefix }) => {
   const [inputValue, setInputValue] = useState('');
   const [isFocused, setIsFocused] = useState(false);
+
 
   useEffect(() => {
     if (!isFocused) {

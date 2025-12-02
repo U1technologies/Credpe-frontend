@@ -1,31 +1,3 @@
-export const metadata = {
-  title: "Education Loan – Study in India or Abroad | Compare Interest Rates & Apply Online | CredPe",
-  description:
-    "Get the best education loan for studying in India or abroad. Compare top banks & NBFCs, check eligibility, required documents, interest rates, collateral options, and apply online with CredPe.",
-  keywords: [
-    "education loan",
-    "student loan India",
-    "study abroad loan",
-    "education loan without collateral",
-    "education loan interest rate",
-    "education loan eligibility",
-    "education loan documents",
-    "apply for education loan",
-    "study loan for abroad",
-    "student loan requirements",
-  ],
-  openGraph: {
-    title: "Education Loan – Compare & Apply Online for India & Abroad Studies | CredPe",
-    description:
-      "Compare education loans from top banks, check eligibility, view required documents, calculate EMI, and apply for student loans to study in India or abroad.",
-    url: "https://credpe.in/loans/education",
-    siteName: "CredPe",
-    type: "website",
-  },
-  alternates: {
-    canonical: "https://credpe.in/loans/education",
-  },
-};
 
 "use client";
 

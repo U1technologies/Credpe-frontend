@@ -1,31 +1,3 @@
-export const metadata = {
-  title: "Home Loan Balance Transfer – Lower Interest Rates & Reduced EMI | CredPe",
-  description:
-    "Transfer your existing home loan to a new bank/NBFC at a lower interest rate. Compare balance transfer offers, eligibility, documents, charges, and calculate EMI savings with CredPe.",
-  keywords: [
-    "home loan balance transfer",
-    "transfer home loan",
-    "housing loan balance transfer",
-    "home loan refinance",
-    "switch home loan",
-    "home loan transfer interest rate",
-    "balance transfer eligibility",
-    "balance transfer documents",
-    "lower EMI home loan",
-    "best banks for home loan transfer"
-  ],
-  openGraph: {
-    title: "Home Loan Balance Transfer – Reduce Interest & EMI | CredPe",
-    description:
-      "Reduce your EMI by transferring your existing home loan to a better lender. Compare interest rates, eligibility, required documents, and apply online with CredPe.",
-    url: "https://credpe.in/loans/transfer-home",
-    siteName: "CredPe",
-    type: "website",
-  },
-  alternates: {
-    canonical: "https://credpe.in/loans/transfer-home",
-  },
-};
 
 "use client";
 

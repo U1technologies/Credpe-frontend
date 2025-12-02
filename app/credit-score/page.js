@@ -1,16 +1,4 @@
 
-export const metadata = {
-  title: "Check Your Credit Score Online – Free CIBIL Score | CredPe",
-  description:
-    "Check your CIBIL credit score instantly through CredPe. Simple mobile verification, secure data handling, and personalised credit insights.",
-  keywords: [
-    "credit score",
-    "CIBIL score check",
-    "free credit score",
-    "check CIBIL online",
-    "credit report India",
-  ],
-};
 
 'use client'
 import { useState } from 'react'
